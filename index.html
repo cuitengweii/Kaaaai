@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="空来 KaaaAi 为传统实体与连锁品牌部署 AI 营销基建，打造 7x24 小时无人值守引流系统。">
+  <meta name="description" content="空来 KaaaAi 为传统实体与连锁品牌部署 AI 营销基建，打造 7x24 小时持续运行引流系统。">
   <title>空来 KaaaAi | AI 营销基建</title>
   <style>
     :root {
@@ -84,7 +84,7 @@
       top: 0;
       z-index: 20;
       display: grid;
-      grid-template-columns: minmax(210px, 1fr) auto minmax(210px, 1fr);
+      grid-template-columns: minmax(300px, 360px) minmax(360px, 1fr) minmax(260px, 360px);
       align-items: center;
       gap: 24px;
       width: 100%;
@@ -101,42 +101,23 @@
       align-items: center;
     }
 
-    .brand { gap: 12px; width: max-content; }
+    .brand { gap: 12px; width: 100%; min-width: 0; }
     .brand-logo {
       width: 42px;
       height: 42px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(99, 232, 141, 0.5);
+      display: block;
+      border: 1px solid rgba(99, 232, 141, 0.28);
       border-radius: 12px;
-      background: linear-gradient(135deg, rgba(99, 232, 141, 0.22), rgba(255, 187, 74, 0.2)), var(--bg-card);
-      box-shadow: inset 0 0 18px rgba(99, 232, 141, 0.08);
-      color: var(--text-primary);
-      font-weight: 900;
-      position: relative;
       overflow: hidden;
-      font-size: 0;
+      background: var(--bg-card);
+      box-shadow: inset 0 0 18px rgba(99, 232, 141, 0.08);
+      flex: 0 0 auto;
     }
 
-    .brand-logo::before {
-      content: "";
-      width: 18px;
-      height: 18px;
-      border: 1px dashed rgba(238, 247, 240, 0.72);
-      border-radius: 5px;
-      box-shadow: 0 0 0 6px rgba(99, 232, 141, 0.08);
-    }
-
-    .brand-logo::after {
-      content: "LOGO";
-      position: absolute;
-      right: 5px;
-      bottom: 4px;
-      color: var(--text-muted);
-      font-family: var(--mono);
-      font-size: 7px;
-      font-weight: 700;
-      letter-spacing: 0;
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .brand-text strong,
@@ -148,18 +129,25 @@
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 0;
+      white-space: nowrap;
     }
 
     .nav {
       justify-content: center;
       gap: 28px;
+      width: 100%;
       color: var(--text-secondary);
       font-size: 14px;
       white-space: nowrap;
     }
 
     .nav a:hover { color: var(--accent-aurora); }
-    .nav-actions { justify-content: flex-end; gap: 10px; }
+    .nav-actions {
+      justify-content: flex-end;
+      gap: 10px;
+      width: 100%;
+      white-space: nowrap;
+    }
     .nav-actions button,
     .ghost-link {
       min-height: 38px;
@@ -171,6 +159,18 @@
       cursor: pointer;
       font-size: 13px;
       font-weight: 700;
+    }
+
+    .nav-actions #langToggle {
+      width: 44px;
+      padding: 0;
+    }
+
+    .ghost-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 88px;
     }
 
     .nav-actions button.theme-icon {
@@ -385,9 +385,23 @@
       height: 10px;
       border-radius: 50%;
       background: var(--status-warning);
+      animation: dotBreath 1.8s ease-in-out infinite;
     }
-    .dots span:nth-child(2) { background: var(--accent-aurora); }
-    .dots span:nth-child(3) { background: var(--status-info); }
+    .dots span:nth-child(2) { background: var(--accent-aurora); animation-delay: 0.22s; }
+    .dots span:nth-child(3) { background: var(--status-info); animation-delay: 0.44s; }
+
+    @keyframes dotBreath {
+      0%, 100% {
+        opacity: 0.46;
+        transform: scale(0.82);
+        box-shadow: 0 0 0 rgba(99, 232, 141, 0);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.08);
+        box-shadow: 0 0 12px currentColor;
+      }
+    }
 
     .live {
       color: var(--accent-aurora);
@@ -620,6 +634,42 @@
       line-height: 1.85;
     }
 
+    .persona-card.wide {
+      grid-column: 1 / -1;
+      min-height: 0;
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .industry-group {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--border-line);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--bg-main) 58%, transparent);
+    }
+
+    .industry-group strong {
+      display: block;
+      color: var(--accent-aurora);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .industry-group em {
+      display: block;
+      margin-top: 10px;
+      color: var(--text-secondary);
+      font-style: normal;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -839,20 +889,17 @@
     .qr-box {
       width: 96px;
       height: 96px;
-      display: grid;
-      place-items: center;
+      display: block;
       border-radius: 6px;
-      border: 1px dashed rgba(99, 232, 141, 0.55);
-      background:
-        linear-gradient(90deg, rgba(99, 232, 141, 0.16) 1px, transparent 1px),
-        linear-gradient(rgba(99, 232, 141, 0.16) 1px, transparent 1px),
-        var(--bg-card);
-      background-size: 12px 12px;
-      color: var(--accent-aurora);
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0;
+      border: 1px solid rgba(99, 232, 141, 0.3);
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+
+    .qr-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .wechat-placeholder span {
@@ -922,10 +969,12 @@
 <body data-theme="dark">
   <header class="site-header">
     <a class="brand" href="https://www.kaaaai.com/" aria-label="KaaaAi">
-      <span class="brand-logo" aria-label="Logo placeholder"></span>
+      <span class="brand-logo" aria-label="KaaaAi logo">
+        <img src="assets/logo.png" alt="KaaaAi logo">
+      </span>
       <span class="brand-text">
         <strong data-i18n="brand">空来</strong>
-        <small data-i18n="brand.tagline">对赌增长  无效不收费  超额共分成</small>
+        <small data-i18n="brand.tagline">不增长 · 0费用 | 超预期 · 共分成</small>
       </span>
     </a>
 
@@ -938,9 +987,9 @@
     </nav>
 
     <div class="nav-actions">
-      <button id="langToggle" type="button">EN</button>
       <button class="theme-icon" id="themeToggle" type="button" aria-label="切换主题"></button>
       <a class="ghost-link" href="#contact" data-i18n="nav.cta">咨询部署</a>
+      <button id="langToggle" type="button">EN</button>
     </div>
   </header>
 
@@ -949,10 +998,10 @@
       <div class="hero-copy">
         <p class="kicker">KaaaAi // AI Marketing Infrastructure</p>
         <h1><span class="brand-word">Kaaa</span><span class="accent-word">Ai</span></h1>
-        <p class="subtitle" data-i18n="hero.subtitle">在线 AI 营销基建平台</p>
-        <p class="lead" data-i18n="hero.lead">为传统实体店、连锁品牌和招商型企业部署企业级 AI 营销软硬件基建，把内容生产、线索采集、社媒触达、私域运营和数据复盘变成 7x24 小时无人值守引流系统。</p>
+        <p class="subtitle" data-i18n="hero.subtitle">不增长，0费用；超预期，共分成</p>
+        <p class="lead" data-i18n="hero.lead">但但但我们不是卖软件，也不迷信单一AI。靠AI算法+实地摸底，为你定制软硬人陪跑方案。对结果负责——否则，我们白干。</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="#contact" data-i18n="hero.primary">开始使用</a>
+          <a class="btn-primary" href="#wechatQr" data-i18n="hero.primary">开始咨询</a>
         </div>
         <div class="tag-row">
           <span class="tag">--asset-over-effort</span>
@@ -964,24 +1013,25 @@
       <div class="code-window" aria-label="KaaaAi operating console">
         <div class="window-bar">
           <div class="dots"><span></span><span></span><span></span></div>
-          <span data-i18n="window.title">KaaaAi · 部署无人值守引流系统</span>
+          <span data-i18n="window.title">部署引流系统</span>
           <span class="live">● LIVE</span>
         </div>
         <div class="code-layout">
           <div class="task-panel">
             <span class="model-pill">kai-7x24</span>
-            <h3 data-i18n="window.plan">计划分成 4 步：</h3>
+            <h3 data-i18n="window.plan">实施计划分为5步</h3>
             <div class="task-list">
-              <p><strong>1.</strong><span data-i18n="window.step1">启动 <code>market-radar</code> 扫描公开平台和竞品评论区</span></p>
-              <p><strong>2.</strong><span data-i18n="window.step2">调用 <code>content-engine</code> 生成门店社媒内容矩阵</span></p>
-              <p><strong>3.</strong><span data-i18n="window.step3">执行 <code>engagement-stack</code> 完成评论、回复与私域引导</span></p>
-              <p><strong>4.</strong><span data-i18n="window.step4">写入 <code>ops-console</code> 输出线索、任务和转化复盘</span></p>
+              <p><strong>1.</strong><span data-i18n="window.step1">摸底——获取企业整体基础盘信息</span></p>
+              <p><strong>2.</strong><span data-i18n="window.step2">定案——制定AI软+硬+人陪跑方案</span></p>
+              <p><strong>3.</strong><span data-i18n="window.step3">定向——品牌定位+趋势分析</span></p>
+              <p><strong>4.</strong><span data-i18n="window.step4">铺量——矩阵内容营销，统一客服管理</span></p>
+              <p><strong>5.</strong><span data-i18n="window.step5">闭环——售前管理、成交部署、复购提醒</span></p>
             </div>
-            <div class="command-box">deploy kaaaai --store-chain --autopilot --asset-mode</div>
+            <div class="command-box">deploy kaaaai --store-chain --always-on --asset-mode</div>
             <div class="terminal-log">
               <p><b>dev@kaaaai:~/growth $</b> npm run lead-radar</p>
               <p>+ 56 capability nodes loaded</p>
-              <p>✓ autopilot system ready</p>
+              <p>✓ growth system ready</p>
             </div>
           </div>
           <div class="file-tree">
@@ -992,9 +1042,23 @@
             <span>private-domain.ts</span>
             <span>franchise-os.ts</span>
             <span>ops-console.ts</span>
-            <span>autopilot-runtime.ts</span>
+            <span>growth-runtime.ts</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="persona">
+      <div class="section-head">
+        <span class="section-num">03 // SCENARIOS</span>
+        <h2 data-i18n="persona.title">适合谁</h2>
+      </div>
+      <div class="persona-grid" id="personaGrid"></div>
+      <div class="metrics">
+        <article class="metric"><strong>24h</strong><span data-i18n="metric.1">智能客服承接</span></article>
+        <article class="metric"><strong>8大</strong><span data-i18n="metric.2">AI 增长引擎</span></article>
+        <article class="metric"><strong>56个</strong><span data-i18n="metric.3">可支配技能</span></article>
+        <article class="metric"><strong>N:1</strong><span data-i18n="metric.4">总部到门店复制</span></article>
       </div>
     </section>
 
@@ -1014,20 +1078,6 @@
         <p class="section-copy" data-i18n="engines.copy">从获客动作到管理后台，KaaaAi 把门店增长拆成清晰的底层模块，每个模块都能单独运行，也能组合成总部到门店的复制系统。</p>
       </div>
       <div class="engine-grid" id="engineGrid"></div>
-    </section>
-
-    <section class="section" id="persona">
-      <div class="section-head">
-        <span class="section-num">03 // SCENARIOS</span>
-        <h2 data-i18n="persona.title">适合谁</h2>
-      </div>
-      <div class="persona-grid" id="personaGrid"></div>
-      <div class="metrics">
-        <article class="metric"><strong>24h</strong><span data-i18n="metric.1">无人值守运行窗口</span></article>
-        <article class="metric"><strong>8</strong><span data-i18n="metric.2">AI 增长引擎</span></article>
-        <article class="metric"><strong>56</strong><span data-i18n="metric.3">标准能力节点</span></article>
-        <article class="metric"><strong>N:1</strong><span data-i18n="metric.4">总部到门店复制</span></article>
-      </div>
     </section>
 
     <section class="section" id="pricing">
@@ -1054,7 +1104,7 @@
           <div class="price" data-i18n="pricing.card2.price">年度系统维护</div>
           <p data-i18n="pricing.card2.copy">让顶尖数字营销自动化技术成为每一家实体店的开箱即用基础设施。</p>
           <ul>
-            <li data-i18n="pricing.card2.item1">7x24 无人值守引流系统</li>
+            <li data-i18n="pricing.card2.item1">7x24 持续运行引流系统</li>
             <li data-i18n="pricing.card2.item2">算法分发、数据抓取与自动触达</li>
             <li data-i18n="pricing.card2.item3">异常提醒与人工接管机制</li>
           </ul>
@@ -1079,7 +1129,7 @@
         </article>
         <article class="mission-card">
           <span class="section-num" data-i18n="vision.label">长期愿景</span>
-          <h3 data-i18n="vision.title">成为无人值守引流系统的首选外脑。</h3>
+          <h3 data-i18n="vision.title">成为持续引流系统的首选外脑。</h3>
           <p data-i18n="vision.copy">未来，每一个开放加盟的传统品牌，标准配置不再只是装修图纸和设备，还必须标配一套由空来驱动的 AI 流量引擎。</p>
         </article>
       </div>
@@ -1099,9 +1149,8 @@
         <div>
           <span class="section-num">05 // DEPLOYMENT</span>
           <h2 data-i18n="cta.title">把获客经验固化成可复制的数字化资产。</h2>
-          <p data-i18n="cta.copy">空来 KaaaAi 帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的无人值守引流系统。</p>
+          <p data-i18n="cta.copy">空来 KaaaAi 帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的持续运行引流系统。</p>
         </div>
-        <a class="btn-primary" href="https://www.kaaaai.com/" data-i18n="cta.primary">访问官网</a>
       </div>
     </section>
   </main>
@@ -1109,9 +1158,9 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <strong data-i18n="footer.brand">空来 KongLai</strong>
+        <strong data-i18n="footer.brand">空来 KaaaAi</strong>
         <span data-i18n="footer.tagline">流量破局，客从空来。</span>
-        <p data-i18n="footer.copy">传统实体与连锁品牌的 AI 增长架构师，专注把无人值守引流系统变成可复制、可管理、可持续放大的数字化资产。</p>
+        <p data-i18n="footer.copy">传统实体与连锁品牌的 AI 增长架构师，专注把持续引流系统变成可复制、可管理、可持续放大的数字化资产。</p>
       </div>
       <div class="footer-side">
         <nav class="footer-links" aria-label="Footer navigation">
@@ -1121,9 +1170,9 @@
           <a href="#persona" data-i18n="nav.persona">场景</a>
           <a href="#pricing" data-i18n="footer.pricing">价格与使命</a>
         </nav>
-        <div class="wechat-placeholder" aria-label="WeChat QR code placeholder">
-          <div class="qr-box">QR</div>
-          <span data-i18n="footer.wechat">微信二维码占位</span>
+        <div class="wechat-placeholder" id="wechatQr" aria-label="WeChat QR code">
+          <div class="qr-box"><img src="assets/qr.png" alt="微信咨询二维码"></div>
+          <span data-i18n="footer.wechat">扫码咨询</span>
         </div>
       </div>
     </div>
@@ -1137,30 +1186,31 @@
     const I18N = {
       zh: {
         brand: "空来",
-        "brand.tagline": "对赌增长  无效不收费  超额共分成",
+        "brand.tagline": "不增长 · 0费用 | 超预期 · 共分成",
         "nav.intro": "介绍",
         "nav.features": "特色",
         "nav.engines": "引擎",
         "nav.persona": "场景",
         "nav.contact": "部署",
         "nav.cta": "咨询部署",
-        "hero.subtitle": "在线 AI 营销基建平台",
-        "hero.lead": "为传统实体店、连锁品牌和招商型企业部署企业级 AI 营销软硬件基建，把内容生产、线索采集、社媒触达、私域运营和数据复盘变成 7x24 小时无人值守引流系统。",
-        "hero.primary": "开始使用",
-        "window.title": "KaaaAi · 部署无人值守引流系统",
-        "window.plan": "计划分成 4 步：",
-        "window.step1": "启动 market-radar 扫描公开平台和竞品评论区",
-        "window.step2": "调用 content-engine 生成门店社媒内容矩阵",
-        "window.step3": "执行 engagement-stack 完成评论、回复与私域引导",
-        "window.step4": "写入 ops-console 输出线索、任务和转化复盘",
+        "hero.subtitle": "不增长，0费用；超预期，共分成",
+        "hero.lead": "但但但我们不是卖软件，也不迷信单一AI。靠AI算法+实地摸底，为你定制软硬人陪跑方案。对结果负责——否则，我们白干。",
+        "hero.primary": "开始咨询",
+        "window.title": "部署引流系统",
+        "window.plan": "实施计划分为5步",
+        "window.step1": "摸底——获取企业整体基础盘信息",
+        "window.step2": "定案——制定AI软+硬+人陪跑方案",
+        "window.step3": "定向——品牌定位+趋势分析",
+        "window.step4": "铺量——矩阵内容营销，统一客服管理",
+        "window.step5": "闭环——售前管理、成交部署、复购提醒",
         "features.title": "功能与特色",
         "features.copy": "你不需要自己拼工具、搭环境、来回切流程。把引流需求交给 KaaaAi，它会从市场情报到私域运营一路接住，真正把 AI 营销变成可持续的工作流。",
         "engines.title": "八大 AI 增长引擎",
         "engines.copy": "从获客动作到管理后台，KaaaAi 把门店增长拆成清晰的底层模块，每个模块都能单独运行，也能组合成总部到门店的复制系统。",
         "persona.title": "适合谁",
-        "metric.1": "无人值守运行窗口",
+        "metric.1": "智能客服承接",
         "metric.2": "AI 增长引擎",
-        "metric.3": "标准能力节点",
+        "metric.3": "可支配技能",
         "metric.4": "总部到门店复制",
         "pricing.title": "不是卖人天，而是部署增长基建。",
         "pricing.copy": "空来不接零散外包需求。我们把大厂级算法分发、数据抓取和自动化触达能力，封装成实体店老板开箱即用的 AI 营销软硬件基建。",
@@ -1175,7 +1225,7 @@
         "pricing.card2.title": "增长基建托管",
         "pricing.card2.price": "年度系统维护",
         "pricing.card2.copy": "让顶尖数字营销自动化技术成为每一家实体店的开箱即用基础设施。",
-        "pricing.card2.item1": "7x24 无人值守引流系统",
+        "pricing.card2.item1": "7x24 持续运行引流系统",
         "pricing.card2.item2": "算法分发、数据抓取与自动触达",
         "pricing.card2.item3": "异常提醒与人工接管机制",
         "pricing.card3.label": "连锁招商",
@@ -1189,7 +1239,7 @@
         "mission.title": "让 AI 增长能力平民化。",
         "mission.copy": "消除技术壁垒，把大厂级别的算法分发、数据抓取和自动化触达能力，用最低成本赋能给线下实体店。",
         "vision.label": "长期愿景",
-        "vision.title": "成为无人值守引流系统的首选外脑。",
+        "vision.title": "成为持续引流系统的首选外脑。",
         "vision.copy": "未来，每一个开放加盟的传统品牌，标准配置不再只是装修图纸和设备，还必须标配一套由空来驱动的 AI 流量引擎。",
         "values.label": "价值观",
         "values.1.title": "实战为王",
@@ -1200,18 +1250,17 @@
         "values.3.copy": "流量不是目的，留量、复购和转介绍才是。",
         "values.4.title": "极简交付",
         "values.4.copy": "不要求客户懂技术，只交付直观界面和数据大屏。",
-        "footer.brand": "空来 KongLai",
+        "footer.brand": "空来 KaaaAi",
         "footer.tagline": "流量破局，客从空来。",
-        "footer.copy": "传统实体与连锁品牌的 AI 增长架构师，专注把无人值守引流系统变成可复制、可管理、可持续放大的数字化资产。",
+        "footer.copy": "传统实体与连锁品牌的 AI 增长架构师，专注把持续引流系统变成可复制、可管理、可持续放大的数字化资产。",
         "footer.pricing": "价格与使命",
-        "footer.wechat": "微信二维码占位",
+        "footer.wechat": "扫码咨询",
         "footer.copyright": "© 2026 KaaaAi. AI Marketing Infrastructure for physical stores.",
         "cta.title": "把获客经验固化成可复制的数字化资产。",
-        "cta.copy": "空来 KaaaAi 帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的无人值守引流系统。",
-        "cta.primary": "访问官网"
+        "cta.copy": "空来 KaaaAi 帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的持续运行引流系统。"
       },
       en: {
-        brand: "Konglai",
+        brand: "KaaaAi",
         "brand.tagline": "Growth wager. No result, no fee. Upside shared.",
         "nav.intro": "Intro",
         "nav.features": "Features",
@@ -1220,22 +1269,23 @@
         "nav.contact": "Deploy",
         "nav.cta": "Consult Us",
         "hero.subtitle": "Online AI Marketing Infrastructure",
-        "hero.lead": "Deploy enterprise-grade AI marketing infrastructure for physical stores, chain brands and franchise businesses, turning content, leads, outreach, private-domain operations and data review into a 7x24 autopilot acquisition system.",
-        "hero.primary": "Start Using",
-        "window.title": "KaaaAi · Deploy autopilot acquisition system",
-        "window.plan": "Plan split into 4 steps:",
-        "window.step1": "Start market-radar to scan public platforms and competitor comments",
-        "window.step2": "Call content-engine to generate store social content matrix",
-        "window.step3": "Run engagement-stack for comments, replies and private-domain routing",
-        "window.step4": "Write ops-console review for leads, tasks and conversions",
+        "hero.lead": "Deploy enterprise-grade AI marketing infrastructure for physical stores, chain brands and franchise businesses, turning content, leads, outreach, private-domain operations and data review into a 7x24 always-on acquisition system.",
+        "hero.primary": "Start Consulting",
+        "window.title": "Deploy acquisition system",
+        "window.plan": "Implementation plan in 5 steps",
+        "window.step1": "Baseline - collect the company's full operating foundation",
+        "window.step2": "Plan - define the AI software + hardware + human support package",
+        "window.step3": "Position - brand positioning + trend analysis",
+        "window.step4": "Scale - matrix content marketing and unified customer service",
+        "window.step5": "Close loop - pre-sales, deal deployment and repeat-purchase reminders",
         "features.title": "Functions and Features",
         "features.copy": "No need to stitch tools, configure environments or switch workflows. Give KaaaAi the acquisition goal and it carries the path from market intelligence to private-domain operations.",
         "engines.title": "Eight AI Growth Engines",
         "engines.copy": "KaaaAi turns store growth into clear infrastructure modules. Each module can run alone or combine into a replicable HQ-to-store system.",
         "persona.title": "Who It Is For",
-        "metric.1": "Autopilot runtime window",
+        "metric.1": "Smart service handoff",
         "metric.2": "AI growth engines",
-        "metric.3": "Standard capability nodes",
+        "metric.3": "Controllable skills",
         "metric.4": "HQ-to-store replication",
         "pricing.title": "We do not sell labor hours. We deploy growth infrastructure.",
         "pricing.copy": "KaaaAi does not take scattered outsourcing requests. We package algorithmic distribution, data capture and automated outreach into out-of-box AI marketing infrastructure for store owners.",
@@ -1250,7 +1300,7 @@
         "pricing.card2.title": "Growth infrastructure care",
         "pricing.card2.price": "Annual system service",
         "pricing.card2.copy": "Make top-tier digital marketing automation an out-of-box infrastructure layer for every store.",
-        "pricing.card2.item1": "7x24 autopilot acquisition system",
+        "pricing.card2.item1": "7x24 always-on acquisition system",
         "pricing.card2.item2": "Algorithmic distribution, data capture and outreach",
         "pricing.card2.item3": "Exception alerts and human handoff",
         "pricing.card3.label": "Franchise",
@@ -1264,7 +1314,7 @@
         "mission.title": "Democratize AI growth capability.",
         "mission.copy": "Remove technical barriers and empower physical stores with enterprise-grade algorithmic distribution, data capture and automated outreach at lower cost.",
         "vision.label": "Vision",
-        "vision.title": "Become the first external brain for unattended acquisition systems.",
+        "vision.title": "Become the first external brain for always-on acquisition systems.",
         "vision.copy": "For every traditional brand that opens franchising, the standard setup should include a KaaaAi-powered traffic engine alongside decoration plans and equipment.",
         "values.label": "Values",
         "values.1.title": "Eat our own dog food",
@@ -1275,15 +1325,14 @@
         "values.3.copy": "Traffic is not the goal. Retention, repurchase and referral are.",
         "values.4.title": "Simplicity",
         "values.4.copy": "Customers do not need to understand the tech. They get clear UI and dashboards.",
-        "footer.brand": "KongLai KaaaAi",
+        "footer.brand": "KaaaAi",
         "footer.tagline": "Traffic breakthrough. Customers arrive.",
-        "footer.copy": "The AI growth architect for physical stores and chain brands, turning unattended acquisition systems into reusable and scalable digital assets.",
+        "footer.copy": "The AI growth architect for physical stores and chain brands, turning continuous acquisition systems into reusable and scalable digital assets.",
         "footer.pricing": "Pricing & Mission",
-        "footer.wechat": "WeChat QR placeholder",
+        "footer.wechat": "Scan to consult",
         "footer.copyright": "© 2026 KaaaAi. AI Marketing Infrastructure for physical stores.",
         "cta.title": "Turn acquisition know-how into reusable digital assets.",
-        "cta.copy": "KaaaAi helps stores convert content production, precise acquisition, intelligent outreach, private-domain conversion and data review into a repeatable autopilot acquisition system.",
-        "cta.primary": "Visit Site"
+        "cta.copy": "KaaaAi helps stores convert content production, precise acquisition, intelligent outreach, private-domain conversion and data review into a repeatable always-on acquisition system."
       }
     };
 
@@ -1309,8 +1358,8 @@
         en: ["HQ-to-store replication", "--franchise-os", "HQ controls strategy while stores localize execution."]
       },
       {
-        zh: ["无人值守运行", "--autopilot-runtime", "定时采集、内容生成、发布准备、异常提醒和人工接管形成持续运行链路。"],
-        en: ["Autopilot runtime", "--autopilot-runtime", "Scheduled collection, generation, preparation, alerts and takeover form a continuous loop."]
+        zh: ["持续运行链路", "--always-on-runtime", "定时采集、内容生成、发布准备、异常提醒和人工接管形成持续运行链路。"],
+        en: ["Continuous runtime", "--always-on-runtime", "Scheduled collection, generation, preparation, alerts and takeover form a continuous loop."]
       }
     ];
 
@@ -1344,19 +1393,51 @@
         en: ["Data Ops Console", "Operational command center", "Owners do not need to understand technology. They need results.", ["Lead-pool dashboard", "Task logs", "Exception takeover"]]
       },
       {
-        zh: ["无人值守自动化引擎", "Autopilot Runtime", "把重复、低效、依赖人工记忆的营销动作交给 AI 系统。", ["定时采集", "自动化浏览器执行", "任务失败诊断"]],
-        en: ["Autopilot Runtime", "Unattended automation", "Move repetitive marketing work into an AI runtime.", ["Scheduled collection", "Browser automation", "Failure diagnosis"]]
+        zh: ["持续运行自动化引擎", "Continuous Runtime", "把重复、低效、依赖人工记忆的营销动作交给 AI 系统。", ["定时采集", "自动化浏览器执行", "任务失败诊断"]],
+        en: ["Continuous Runtime", "Always-on automation", "Move repetitive marketing work into an AI runtime.", ["Scheduled collection", "Browser automation", "Failure diagnosis"]]
       }
     ];
 
     const PERSONAS = [
       {
-        zh: ["连锁品牌招商负责人", "系统级赋能，把获客能力变成招商核武器。", "加盟即送全套 AI 获客系统，将底层数据抓取与算法分发能力作为招商终极筹码，创造持续收取的系统维护费收入。"],
-        en: ["Franchise and chain-brand leaders", "System-level enablement turns acquisition into a franchise weapon.", "Bundle a full AI acquisition system with every franchise package and create recurring maintenance-fee revenue."]
+        zh: ["对您的要求", "有门店，有产品，有3人以上员工<br>——您就是我们的客户。", "我们提供软+硬+人陪跑服务，把三人团队变成内容生产、线索采集、私域复购的全自动系统。加上我们，您一人便能调度千军万马的营销力量。"],
+        en: ["What we need from you", "If you have stores, products and more than 3 employees<br>- you are our customer.", "We provide software + hardware + human support, turning a three-person team into an automated system for content, leads and repeat purchase. With us, one person can command a full marketing force."]
       },
       {
         zh: ["高客单价传统实体店老板", "极简交付，直接开箱即用总部级增长基建。", "无需配置 3-5 人研发或新媒体团队，直接使用总部级 AI 自动截流与私域管家。"],
         en: ["High-ticket physical store owners", "Deploy HQ-grade growth infrastructure out of the box.", "No need for a 3-5 person R&D or media team. Use HQ-level AI interception and private-domain operations immediately."]
+      },
+      {
+        zh: [
+          "覆盖行业",
+          "适合需要持续获客、客服承接和私域复购的本地服务与连锁业态。",
+          "餐饮、美业、运动、零售、家装、汽车、教育和生活服务，都可以按门店真实基础盘定制软硬人陪跑方案。",
+          [
+            ["餐饮类", "餐饮连锁、火锅店、茶饮店、烘焙坊、快餐店、咖啡店、烧烤店、甜品店"],
+            ["美业与健康类", "美容院、美发店、医美诊所、皮肤管理中心、美甲美睫店、减肥瘦身馆、养生会所、推拿按摩店"],
+            ["健身与运动类", "健身房、瑜伽馆、舞蹈工作室、拳击馆、游泳馆"],
+            ["零售与生活服务类", "服装连锁、母婴用品店、美妆集合店、数码体验店、宠物店、超市便利店、家居生活馆、眼镜店、珠宝首饰店"],
+            ["家装与房产类", "家装公司、建材城、软装馆、房产中介"],
+            ["汽车服务类", "汽车美容店、维修保养店、洗车连锁"],
+            ["教育与加盟类", "教育加盟、早教中心、编程培训、艺术培训班、托管辅导"],
+            ["其他服务类", "洗衣连锁、家政公司、搬家公司、旅游门店、口腔诊所、药店连锁、婚纱摄影、KTV娱乐"]
+          ]
+        ],
+        en: [
+          "Covered industries",
+          "For local service and chain businesses that need continuous acquisition, service handoff and repeat purchase.",
+          "Food, beauty, fitness, retail, home, auto, education and local services can all be configured from the real store baseline.",
+          [
+            ["Food and beverage", "Chain restaurants, hot pot, tea drinks, bakeries, fast food, coffee shops, barbecue, desserts"],
+            ["Beauty and health", "Beauty salons, hair salons, medical aesthetics, skin management, nails and lashes, slimming, wellness, massage"],
+            ["Fitness and sports", "Gyms, yoga studios, dance studios, boxing gyms, swimming venues"],
+            ["Retail and local services", "Fashion chains, maternity stores, beauty retail, digital experience stores, pet stores, convenience stores, home lifestyle, eyewear, jewelry"],
+            ["Home and property", "Renovation companies, building-material malls, soft furnishing stores, real estate agencies"],
+            ["Auto services", "Auto detailing, repair and maintenance, car wash chains"],
+            ["Education and franchise", "Education franchises, early education, coding, art training, after-school tutoring"],
+            ["Other services", "Laundry chains, housekeeping, moving companies, travel stores, dental clinics, pharmacy chains, wedding photography, KTV entertainment"]
+          ]
+        ]
       }
     ];
 
@@ -1414,10 +1495,16 @@
     function renderPersonas() {
       document.getElementById("personaGrid").innerHTML = PERSONAS.map((persona) => {
         const item = persona[state.lang];
-        return `<article class="persona-card">
+        const groups = Array.isArray(item[3]) ? `<div class="industry-grid">${item[3].map((group) => `
+          <div class="industry-group">
+            <strong>${group[0]}</strong>
+            <em>${group[1]}</em>
+          </div>`).join("")}</div>` : "";
+        return `<article class="persona-card${groups ? " wide" : ""}">
           <span>${item[0]}</span>
           <h3>${item[1]}</h3>
           <p>${item[2]}</p>
+          ${groups}
         </article>`;
       }).join("");
     }
