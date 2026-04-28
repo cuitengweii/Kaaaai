@@ -3,82 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="空来 KaaaAi 为企业部署 AI 营销软硬件基建，打造 7x24 小时无人值守引流系统。">
-  <title>空来 KaaaAi | AI Marketing Infrastructure</title>
+  <meta name="description" content="空来 KaaaAi 为传统实体与连锁品牌部署 AI 营销基建，打造 7x24 小时无人值守引流系统。">
+  <title>空来 KaaaAi | AI 营销基建</title>
   <style>
     :root {
-      --bg-main: #0F0F0F;
-      --bg-card: #202020;
-      --text-primary: #E0E0E0;
-      --text-secondary: #888888;
-      --text-on-primary: #0F0F0F;
-      --border-line: #333333;
-      --accent-aurora: #5DD62C;
-      --gradient-dark: #337418;
-      --status-success: #28A745;
-      --status-warning: #FF9900;
-      --status-danger: #FF3366;
-      --status-info: #00A3FF;
-      --accent-aurora-rgb-15: rgba(93, 214, 44, 0.15);
-      --accent-aurora-rgb-40: rgba(93, 214, 44, 0.4);
-      --generic-hover: rgba(255, 255, 255, 0.04);
-      --bg: var(--bg-main);
-      --bg-2: #050505;
-      --panel: rgba(32, 32, 32, 0.7);
-      --panel-strong: rgba(32, 32, 32, 0.92);
-      --glass: rgba(32, 32, 32, 0.7);
-      --text: var(--text-primary);
-      --muted: var(--text-secondary);
-      --line: var(--border-line);
-      --line-cyan: rgba(0, 163, 255, 0.22);
-      --green: var(--accent-aurora);
-      --cyan: var(--status-info);
-      --amber: var(--status-warning);
-      --danger: var(--status-danger);
+      --bg-main: #07100b;
+      --bg-deep: #020604;
+      --bg-card: #0d1711;
+      --bg-card-2: #101d15;
+      --text-primary: #eef7f0;
+      --text-secondary: #8b9a90;
+      --text-muted: #5d6d63;
+      --text-on-primary: #061008;
+      --border-line: rgba(119, 150, 127, 0.18);
+      --accent-aurora: #63e88d;
+      --accent-strong: #82f7a7;
+      --accent-dim: rgba(99, 232, 141, 0.12);
+      --status-info: #68d8ff;
+      --status-warning: #ffbb4a;
+      --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.45);
+      --theme-icon: "☀";
       --mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
       --sans: Inter, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
-      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.8);
-      --shadow-green: 0 0 12px var(--accent-aurora-rgb-40);
-      --shadow-cyan: 0 0 18px rgba(0, 163, 255, 0.22);
     }
 
     body[data-theme="light"] {
-      --bg-main: #F5F7FA;
-      --bg-card: #FFFFFF;
-      --text-primary: #1A1A1A;
-      --text-secondary: #666666;
-      --text-on-primary: #FFFFFF;
-      --border-line: #EBEEF5;
-      --accent-aurora: #00B853;
-      --gradient-dark: #E8F5E9;
-      --accent-aurora-rgb-15: rgba(0, 184, 83, 0.12);
-      --accent-aurora-rgb-40: rgba(0, 184, 83, 0.28);
-      --generic-hover: rgba(0, 0, 0, 0.02);
-      --bg: var(--bg-main);
-      --bg-2: #FFFFFF;
-      --panel: rgba(255, 255, 255, 0.78);
-      --panel-strong: rgba(255, 255, 255, 0.95);
-      --glass: rgba(255, 255, 255, 0.82);
-      --text: var(--text-primary);
-      --muted: var(--text-secondary);
-      --line: var(--border-line);
-      --green: var(--accent-aurora);
-      --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
-      --shadow-green: 0 0 12px var(--accent-aurora-rgb-40);
-      --shadow-cyan: 0 0 14px rgba(0, 163, 255, 0.16);
+      --bg-main: #f5f8f4;
+      --bg-deep: #eaf3ec;
+      --bg-card: #ffffff;
+      --bg-card-2: #f8fbf8;
+      --text-primary: #142016;
+      --text-secondary: #536156;
+      --text-muted: #7a897d;
+      --text-on-primary: #ffffff;
+      --border-line: rgba(20, 32, 22, 0.12);
+      --accent-aurora: #00b853;
+      --accent-strong: #00a84c;
+      --accent-dim: rgba(0, 184, 83, 0.1);
+      --shadow-card: 0 8px 24px rgba(16, 32, 20, 0.08);
+      --theme-icon: "☾";
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; background: var(--bg); }
+    html { scroll-behavior: auto; background: var(--bg-main); }
     body {
-      min-width: 320px;
       margin: 0;
+      min-width: 320px;
       overflow-x: hidden;
       background:
-        radial-gradient(circle at 18% 8%, var(--accent-aurora-rgb-15), transparent 28%),
-        radial-gradient(circle at 80% 2%, rgba(0, 163, 255, 0.12), transparent 30%),
-        linear-gradient(135deg, var(--bg-main), var(--bg-2) 52%, var(--bg-main));
-      color: var(--text);
+        radial-gradient(circle at 28% 8%, rgba(99, 232, 141, 0.12), transparent 30%),
+        linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-main) 38%, var(--bg-deep) 100%);
+      color: var(--text-primary);
       font-family: var(--sans);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -88,1237 +63,1310 @@
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -4;
+      z-index: -1;
       pointer-events: none;
-      opacity: 0.22;
+      opacity: 0.26;
       background-image:
-        linear-gradient(var(--accent-aurora-rgb-15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 163, 255, 0.1) 1px, transparent 1px);
-      background-size: 54px 54px;
-      mask-image: linear-gradient(to bottom, #000, transparent 88%);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -3;
-      pointer-events: none;
-      opacity: 0.08;
-      background: repeating-linear-gradient(0deg, transparent 0 7px, rgba(255, 255, 255, 0.12) 8px);
-      mix-blend-mode: screen;
+        linear-gradient(rgba(99, 232, 141, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 232, 141, 0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(to bottom, #000, transparent 86%);
     }
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
     h1, h2, h3, p, ol { margin: 0; }
-    main, section, article, div { min-width: 0; }
-    .mono, .metric strong, .terminal, .chip, .status-feed, .engine-index, .control-btn { font-family: var(--mono); }
-    .data-numbers { font-family: var(--mono); }
-
-    .el-button--primary, .ant-btn-primary, .btn-primary {
-      background-color: var(--accent-aurora) !important;
-      color: var(--text-on-primary) !important;
-      border: none !important;
-      font-weight: 600;
-    }
-
-    .el-button--primary svg, .ant-btn-primary svg, .btn-primary svg,
-    .el-button--primary i, .ant-btn-primary i, .btn-primary i {
-      color: var(--text-on-primary) !important;
-      fill: var(--text-on-primary) !important;
-    }
-
-    .el-select-dropdown__item, .ant-select-item-option, [role="option"] {
-      background-color: transparent !important;
-      color: var(--text-primary) !important;
-    }
-
-    .el-select-dropdown__item:hover, .el-select-dropdown__item.selected,
-    .ant-select-item-option-active, .ant-select-item-option-selected,
-    [role="option"]:hover, [role="option"][aria-selected="true"] {
-      background-color: var(--accent-aurora-rgb-15) !important;
-      color: var(--accent-aurora) !important;
-      border-left: 2px solid var(--accent-aurora) !important;
-    }
-
-    .custom-checkbox-inner, .custom-radio-inner, .custom-select-arrow svg {
-      width: 16px !important;
-      height: 16px !important;
-      flex-shrink: 0 !important;
-      box-sizing: border-box;
-    }
-
-    .form-item-wrapper { display: flex; align-items: center; gap: 8px; }
-    #signalCanvas {
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      pointer-events: none;
-    }
+    button { font: inherit; }
+    .mono, .code-window, .kicker, .tag, .module-index, .metric strong, .nav-actions button { font-family: var(--mono); }
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 40;
+      z-index: 20;
       display: grid;
-      grid-template-columns: minmax(210px, 1fr) auto minmax(220px, 1fr);
-      gap: 22px;
+      grid-template-columns: minmax(210px, 1fr) auto minmax(210px, 1fr);
       align-items: center;
-      padding: 14px clamp(18px, 5vw, 72px);
-      border-bottom: 1px solid var(--line);
-      background: color-mix(in srgb, var(--bg-main) 76%, transparent);
+      gap: 24px;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 14px clamp(20px, 6vw, 72px);
+      background: color-mix(in srgb, var(--bg-deep) 82%, transparent);
+      border-bottom: 1px solid var(--border-line);
       backdrop-filter: blur(12px);
     }
 
-    .brand, .nav, .header-controls, .hero-actions, .chips, .metric-grid, .engine-top, .persona-grid, .cta-actions {
+    .brand, .nav, .nav-actions, .hero-actions, .tag-row, .metrics {
       display: flex;
       align-items: center;
     }
 
     .brand { gap: 12px; width: max-content; }
-    .brand-mark {
-      position: relative;
+    .brand-logo {
+      width: 42px;
+      height: 42px;
       display: grid;
-      width: 48px;
-      height: 48px;
       place-items: center;
-      overflow: hidden;
-      border: 1px solid color-mix(in srgb, var(--accent-aurora) 46%, transparent);
-      border-radius: 6px;
-      background: var(--bg-card);
-      box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.55);
-    }
-
-    .brand-mark::before {
-      content: "";
-      position: absolute;
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 163, 255, 0.45);
-      transform: rotateX(64deg);
-      animation: logoOrbit 5s linear infinite;
-    }
-
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      inset: -32px;
-      background: conic-gradient(transparent, color-mix(in srgb, var(--accent-aurora) 86%, transparent), transparent, rgba(255, 153, 0, 0.76), transparent);
-      animation: spin 4.5s linear infinite;
-    }
-
-    .brand-mark span {
-      position: relative;
-      z-index: 1;
-      font-size: 22px;
+      border: 1px solid rgba(99, 232, 141, 0.5);
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(99, 232, 141, 0.22), rgba(255, 187, 74, 0.2)), var(--bg-card);
+      box-shadow: inset 0 0 18px rgba(99, 232, 141, 0.08);
+      color: var(--text-primary);
       font-weight: 900;
+      position: relative;
+      overflow: hidden;
+      font-size: 0;
     }
 
-    .brand-name strong, .brand-name small { display: block; }
-    .brand-name strong { font-size: 18px; letter-spacing: 0.01em; }
-    .brand-name small { margin-top: 2px; color: var(--muted); font-family: var(--mono); font-size: 12px; }
+    .brand-logo::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      border: 1px dashed rgba(238, 247, 240, 0.72);
+      border-radius: 5px;
+      box-shadow: 0 0 0 6px rgba(99, 232, 141, 0.08);
+    }
+
+    .brand-logo::after {
+      content: "LOGO";
+      position: absolute;
+      right: 5px;
+      bottom: 4px;
+      color: var(--text-muted);
+      font-family: var(--mono);
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .brand-text strong,
+    .brand-text small { display: block; }
+    .brand-text strong { font-size: 18px; line-height: 1.1; }
+    .brand-text small {
+      margin-top: 4px;
+      color: var(--text-secondary);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0;
+    }
 
     .nav {
       justify-content: center;
-      gap: 18px;
-      color: var(--muted);
+      gap: 28px;
+      color: var(--text-secondary);
       font-size: 14px;
       white-space: nowrap;
     }
 
-    .nav a { transition: color 0.2s ease, text-shadow 0.2s ease; }
-    .nav a:hover { color: var(--green); text-shadow: 0 0 16px rgba(91, 255, 179, 0.55); }
-
-    .header-controls {
-      justify-content: flex-end;
-      gap: 10px;
-    }
-
-    .control-btn, .nav-cta {
+    .nav a:hover { color: var(--accent-aurora); }
+    .nav-actions { justify-content: flex-end; gap: 10px; }
+    .nav-actions button,
+    .ghost-link {
       min-height: 38px;
-      border: none;
+      padding: 0 14px;
+      border: 1px solid var(--border-line);
       border-radius: 6px;
       color: var(--text-secondary);
       background: transparent;
-      box-shadow: none;
-      font-weight: 800;
       cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    .control-btn { padding: 0 12px; }
-    .nav-cta { display: inline-flex; align-items: center; padding: 0 16px; }
-    .control-btn:hover, .nav-cta:hover {
+    .nav-actions button.theme-icon {
+      width: 40px;
+      height: 38px;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: visible;
+      color: transparent;
+      font-size: 0 !important;
+    }
+
+    .nav-actions button.theme-icon::before {
+      content: var(--theme-icon);
+      font-size: 16px;
+      line-height: 1;
+      color: var(--text-secondary);
+      transform-origin: 50% -10px;
+      transition: color 160ms ease, filter 160ms ease;
+    }
+
+    .nav-actions button.theme-icon::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      width: 1px;
+      height: 10px;
+      background: var(--text-secondary);
+      opacity: 0.42;
+      transform: translateX(-50%);
+    }
+
+    .nav-actions button.theme-icon:hover::before {
       color: var(--accent-aurora);
-      background: var(--accent-aurora-rgb-15);
-      text-shadow: 0 0 12px var(--accent-aurora-rgb-40);
+      filter: drop-shadow(0 0 8px rgba(99, 232, 141, 0.7));
+    }
+
+    .nav-actions button.theme-icon.is-pulling::before {
+      animation: lampPull 520ms cubic-bezier(.2, .9, .2, 1);
+    }
+
+    .nav-actions button.theme-icon.is-pulling::after {
+      animation: cordPull 520ms cubic-bezier(.2, .9, .2, 1);
+    }
+
+    body.theme-flash::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 19;
+      pointer-events: none;
+      background: radial-gradient(circle at 88% 5%, rgba(99, 232, 141, 0.18), transparent 34%);
+      animation: lampFlash 420ms ease-out forwards;
+    }
+
+    @keyframes lampPull {
+      0% { transform: translateY(0) rotate(0deg); }
+      36% { transform: translateY(8px) rotate(-9deg); }
+      66% { transform: translateY(-2px) rotate(6deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+
+    @keyframes cordPull {
+      0% { height: 10px; transform: translateX(-50%) translateY(0); opacity: 0.42; }
+      36% { height: 18px; transform: translateX(-50%) translateY(5px); opacity: 0.78; }
+      100% { height: 10px; transform: translateX(-50%) translateY(0); opacity: 0.42; }
+    }
+
+    @keyframes lampFlash {
+      0% { opacity: 0; }
+      24% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .ghost-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .nav-actions button:hover,
+    .ghost-link:hover {
+      color: var(--accent-aurora);
+      background: var(--accent-dim);
+    }
+
+    .page-shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(320px, 0.92fr) minmax(430px, 1.08fr);
-      gap: clamp(28px, 5vw, 76px);
+      grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+      gap: clamp(36px, 6vw, 90px);
       align-items: center;
-      min-height: clamp(680px, calc(100svh - 148px), 900px);
-      padding: clamp(44px, 7vw, 86px) clamp(18px, 5vw, 72px) 42px;
+      min-height: 720px;
+      padding: 86px 0 74px;
     }
 
-    .terminal {
-      position: relative;
-      width: max-content;
-      max-width: 100%;
-      min-height: 38px;
-      margin-bottom: 20px;
-      padding: 9px 14px;
-      overflow: hidden;
-      border: 1px solid var(--border-line);
-      border-radius: 6px;
-      color: var(--green);
-      background: var(--bg-main);
-      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
-      white-space: nowrap;
-    }
-
-    .terminal::after {
-      content: "";
-      display: inline-block;
-      width: 8px;
-      height: 16px;
-      margin-left: 5px;
-      background: var(--accent-aurora);
-      vertical-align: -2px;
-      animation: blink 0.9s steps(2, start) infinite;
-    }
-
-    .eyebrow {
-      margin-bottom: 12px;
-      color: var(--green);
+    .hero-copy { max-width: 580px; }
+    .kicker {
+      margin-bottom: 22px;
+      color: var(--accent-aurora);
       font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 0.02em;
+      font-weight: 800;
     }
 
     h1 {
-      max-width: 800px;
-      font-size: clamp(46px, 7vw, 96px);
-      line-height: 0.96;
+      max-width: 580px;
+      font-size: clamp(52px, 7vw, 86px);
+      line-height: 0.98;
       letter-spacing: 0;
     }
 
-    h1 span {
-      color: transparent;
-      background: linear-gradient(100deg, var(--green), var(--cyan), var(--amber), var(--green));
-      background-size: 240% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: textFlow 5.2s ease-in-out infinite;
-    }
+    h1 .brand-word { color: var(--text-primary); }
+    h1 .accent-word { color: var(--accent-aurora); }
 
-    h2 {
-      font-size: clamp(30px, 4vw, 54px);
-      line-height: 1.12;
-      letter-spacing: 0;
-    }
-
-    h3 { font-size: 22px; line-height: 1.25; letter-spacing: 0; }
-    .lead {
-      max-width: 720px;
-      margin-top: 24px;
+    .subtitle {
+      margin-top: 18px;
       color: var(--text-primary);
-      font-size: clamp(17px, 1.65vw, 21px);
-      line-height: 1.78;
+      font-size: clamp(25px, 3vw, 34px);
+      font-weight: 800;
+      line-height: 1.35;
     }
 
-    .asset-core {
-      position: relative;
-      max-width: 660px;
-      margin-top: 20px;
-      padding: 18px;
-      border: 1px solid color-mix(in srgb, var(--status-warning) 34%, var(--border-line));
-      border-radius: 8px;
-      background: var(--panel);
-      box-shadow: var(--shadow-card);
+    .lead {
+      margin-top: 22px;
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.9;
     }
 
-    .asset-core strong {
-      display: block;
-      color: var(--amber);
-      font-family: var(--mono);
-      font-size: 15px;
+    .hero-actions {
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
     }
 
-    .asset-core span {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .hero-actions, .chips { flex-wrap: wrap; gap: 12px; }
-    .hero-actions { margin-top: 30px; }
-    .primary-action, .secondary-action {
-      position: relative;
+    .btn-primary,
+    .btn-secondary {
       display: inline-flex;
       min-height: 48px;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
-      border-radius: 999px;
-      font-weight: 900;
-    }
-
-    .primary-action {
       padding: 0 22px;
-      color: var(--text-on-primary) !important;
+      border-radius: 6px;
+      font-weight: 800;
+    }
+
+    .btn-primary {
+      border: none;
+      color: var(--text-on-primary);
       background: var(--accent-aurora);
-      box-shadow: var(--shadow-green);
+      box-shadow: 0 0 18px rgba(99, 232, 141, 0.2);
     }
 
-    .primary-action::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
-      transform: translateX(-120%);
-      animation: sweep 3.4s ease-in-out infinite;
-    }
-
-    .secondary-action {
-      padding: 0 20px;
+    .btn-secondary {
       border: 1px solid var(--border-line);
-      color: var(--text);
+      color: var(--text-primary);
       background: transparent;
-      backdrop-filter: blur(12px);
+      font-family: var(--mono);
+      font-size: 14px;
     }
 
-    .chips { margin-top: 24px; }
-    .chip {
-      min-height: 34px;
-      padding: 8px 12px;
+    .tag-row {
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .tag {
+      min-height: 30px;
+      padding: 7px 11px;
       border: 1px solid var(--border-line);
       border-radius: 6px;
       color: var(--text-secondary);
-      background: var(--panel);
+      background: color-mix(in srgb, var(--bg-card) 72%, transparent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .code-window {
+      overflow: hidden;
+      border: 1px solid var(--border-line);
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--bg-card) 82%, transparent);
+      box-shadow: var(--shadow-card);
+    }
+
+    .window-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 44px;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--border-line);
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .dots { display: flex; gap: 8px; }
+    .dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--status-warning);
+    }
+    .dots span:nth-child(2) { background: var(--accent-aurora); }
+    .dots span:nth-child(3) { background: var(--status-info); }
+
+    .live {
+      color: var(--accent-aurora);
+      font-weight: 800;
+    }
+
+    .code-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 210px;
+      min-height: 470px;
+    }
+
+    .task-panel {
+      padding: 24px;
+      border-right: 1px solid var(--border-line);
+    }
+
+    .model-pill {
+      display: inline-flex;
+      min-height: 26px;
+      align-items: center;
+      padding: 0 10px;
+      border: 1px solid rgba(99, 232, 141, 0.3);
+      border-radius: 999px;
+      color: var(--accent-aurora);
+      background: var(--accent-dim);
       font-size: 12px;
       font-weight: 800;
     }
 
-    .hero-stage {
-      position: relative;
-      min-height: 560px;
-      perspective: 1400px;
+    .task-panel h3 {
+      margin-top: 24px;
+      color: var(--text-primary);
+      font-size: 15px;
     }
 
-    .stage-image {
-      position: absolute;
-      inset: 5% 0 0 0;
-      overflow: hidden;
-      border: 1px solid var(--border-line);
-      border-radius: 8px;
-      background: var(--bg-card);
-      box-shadow: var(--shadow-card);
-      transform: rotateY(-7deg) rotateX(4deg);
-      animation: stageFloat 6.5s ease-in-out infinite;
-    }
-
-    .stage-image::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background:
-        linear-gradient(120deg, var(--accent-aurora-rgb-15), transparent 24%, transparent 62%, rgba(255, 153, 0, 0.1)),
-        repeating-linear-gradient(0deg, transparent 0 16px, rgba(255, 255, 255, 0.035) 17px);
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    .stage-image img {
-      width: 100%;
-      height: 100%;
-      min-height: 560px;
-      object-fit: cover;
-    }
-
-    .scan-line {
-      position: absolute;
-      inset: -32% 0 auto;
-      z-index: 2;
-      height: 30%;
-      background: linear-gradient(to bottom, transparent, var(--accent-aurora-rgb-15), transparent);
-      animation: scanMove 4.5s ease-in-out infinite;
-    }
-
-    .orbit {
-      position: absolute;
-      top: 0;
-      right: 8%;
-      width: min(42vw, 420px);
-      aspect-ratio: 1;
-      border: 1px solid rgba(0, 163, 255, 0.2);
-      border-radius: 50%;
-      animation: spin 18s linear infinite;
-    }
-
-    .orbit::before, .orbit::after {
-      content: "";
-      position: absolute;
-      inset: 15%;
-      border: 1px solid var(--accent-aurora-rgb-15);
-      border-radius: 50%;
-    }
-
-    .orbit::after { inset: 31%; border-color: rgba(255, 153, 0, 0.18); }
-    .orbit span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 62px;
-      height: 30px;
+    .task-list {
       display: grid;
-      place-items: center;
-      border: 1px solid var(--border-line);
+      gap: 14px;
+      margin-top: 18px;
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .task-list strong { color: var(--accent-aurora); margin-right: 8px; }
+    .task-list code { color: var(--status-warning); }
+
+    .command-box {
+      margin-top: 22px;
+      padding: 13px 14px;
+      border: 1px solid rgba(99, 232, 141, 0.34);
       border-radius: 6px;
-      background: var(--bg-card);
-      color: var(--text);
-      font-family: var(--mono);
-      font-size: 12px;
-      font-weight: 900;
-      transform: rotate(calc(var(--i) * 60deg)) translate(174px) rotate(calc(var(--i) * -60deg));
-    }
-
-    .status-feed {
-      position: absolute;
-      left: 2%;
-      bottom: 0;
-      z-index: 4;
-      width: min(380px, 75%);
-      padding: 16px;
-      border: 1px solid var(--accent-aurora-rgb-15);
-      border-radius: 8px;
-      background: var(--panel);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-card);
-    }
-
-    .status-feed strong { display: block; color: var(--green); margin-bottom: 10px; }
-    .status-feed span {
-      display: block;
-      margin-top: 7px;
-      color: var(--muted);
+      color: var(--accent-aurora);
+      background: rgba(99, 232, 141, 0.06);
       font-size: 13px;
     }
 
-    .metric-grid {
-      flex-wrap: wrap;
-      gap: 14px;
-      padding: 0 clamp(18px, 5vw, 72px) 62px;
+    .terminal-log {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-line);
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.7;
     }
 
-    .metric {
-      position: relative;
-      flex: 1 1 210px;
-      min-height: 118px;
-      overflow: hidden;
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-card);
+    .terminal-log b { color: var(--accent-aurora); font-weight: 800; }
+
+    .file-tree {
+      padding: 18px;
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 2;
     }
 
-    .metric::after {
-      content: "";
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 14px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--green), var(--cyan), var(--amber));
-      animation: linePulse 2.6s ease-in-out infinite;
+    .file-tree strong {
+      display: block;
+      color: var(--text-primary);
+      margin-bottom: 6px;
     }
 
-    .metric strong { display: block; color: var(--green); font-size: 38px; }
-    .metric span { display: block; margin-top: 9px; color: var(--muted); font-weight: 800; }
+    .file-tree span {
+      display: block;
+      padding-left: 14px;
+    }
 
-    .section { padding: 84px clamp(18px, 5vw, 72px); }
-    .section-head { max-width: 960px; margin-bottom: 32px; }
-    .section-copy { max-width: 860px; margin-top: 18px; color: var(--muted); font-size: 17px; line-height: 1.82; }
+    .section {
+      padding: 80px 0;
+    }
 
-    .thesis {
+    .section-head {
+      max-width: 900px;
+      margin-bottom: 34px;
+    }
+
+    .section-num {
+      color: var(--accent-aurora);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin-top: 12px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.16;
+    }
+
+    .section-copy {
+      margin-top: 16px;
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .feature-grid {
       display: grid;
-      grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .thesis-card, .engine-card, .persona-card, .console, .cta-panel {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-card);
-    }
-
-    .thesis-card { padding: 24px; min-height: 260px; }
-    .thesis-card strong { color: var(--amber); font-family: var(--mono); }
-    .thesis-card p { margin-top: 16px; color: var(--muted); line-height: 1.76; }
-    .flow {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .flow article {
-      min-height: 124px;
-      padding: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       border: 1px solid var(--border-line);
-      border-radius: 6px;
-      background: var(--generic-hover);
+      border-radius: 10px;
+      overflow: hidden;
+      background: color-mix(in srgb, var(--bg-card) 62%, transparent);
     }
 
-    .flow strong { display: block; color: var(--green); font-family: var(--mono); }
-    .flow span { display: block; margin-top: 10px; color: var(--muted); line-height: 1.55; }
+    .feature-card {
+      min-height: 250px;
+      padding: 28px;
+      border-right: 1px solid var(--border-line);
+      border-bottom: 1px solid var(--border-line);
+      background: color-mix(in srgb, var(--bg-card) 72%, transparent);
+    }
+
+    .feature-card:nth-child(3n) { border-right: none; }
+    .module-index {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .feature-card h3 {
+      margin-top: 28px;
+      color: var(--accent-aurora);
+      font-size: 24px;
+      line-height: 1.32;
+    }
+
+    .feature-card p {
+      margin-top: 18px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
 
     .engine-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .engine-card {
-      min-height: 570px;
+      min-height: 430px;
       padding: 22px;
-      transform-style: preserve-3d;
-      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      border: 1px solid var(--border-line);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--bg-card) 74%, transparent);
     }
 
-    .engine-card::before {
-      content: "";
-      position: absolute;
-      inset: -2px;
-      z-index: -1;
-      border-radius: inherit;
-      background: conic-gradient(from var(--angle), transparent 0 18%, var(--accent-aurora), transparent 42%, var(--status-info), transparent 72%, var(--status-warning), transparent);
-      opacity: 0.12;
-      animation: borderTrace 6s linear infinite;
+    .engine-card h3 {
+      margin-top: 18px;
+      font-size: 20px;
+      line-height: 1.35;
     }
 
-    .engine-card::after {
-      content: attr(data-stream);
-      position: absolute;
-      right: 14px;
-      bottom: 12px;
-      max-width: 78%;
-      opacity: 0;
-      color: rgba(91, 255, 179, 0.5);
-      font-family: var(--mono);
-      font-size: 11px;
-      line-height: 1.55;
-      text-align: right;
-      white-space: pre-line;
-      transition: opacity 0.18s ease;
-      pointer-events: none;
-    }
-
-    .engine-card:hover {
-      border-color: color-mix(in srgb, var(--accent-aurora) 54%, transparent);
-      box-shadow: var(--shadow-card), 0 0 0 1px var(--accent-aurora-rgb-40), var(--shadow-green);
-    }
-
-    .engine-card:hover::after { opacity: 1; }
-    .engine-top { justify-content: space-between; gap: 14px; margin-bottom: 18px; }
-    .engine-index {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      flex: 0 0 auto;
-      place-items: center;
-      border: 1px solid rgba(0, 163, 255, 0.34);
-      border-radius: 6px;
-      color: var(--cyan);
-      background: rgba(0, 163, 255, 0.08);
-      font-weight: 900;
-    }
-
-    .engine-title small {
+    .engine-card small {
       display: block;
-      margin-top: 4px;
-      color: var(--cyan);
+      margin-top: 5px;
+      color: var(--accent-aurora);
       font-family: var(--mono);
       font-size: 12px;
     }
 
-    .summary { min-height: 58px; color: var(--muted); line-height: 1.65; }
-    .ability {
-      margin-top: 18px;
-      padding: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      background: var(--generic-hover);
+    .engine-card p {
+      margin-top: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
     }
 
-    .ability strong { display: block; margin-bottom: 12px; color: var(--green); font-family: var(--mono); }
-    .ability ol { display: grid; gap: 8px; padding-left: 20px; color: var(--muted); }
-    .ability li { line-height: 1.52; }
-    .pain {
+    .engine-card ol {
+      display: grid;
+      gap: 8px;
       margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--muted);
-      line-height: 1.7;
+      padding-left: 19px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.55;
     }
 
-    .pain strong { color: var(--amber); }
-
-    .console-section {
+    .persona-grid {
       display: grid;
-      grid-template-columns: minmax(300px, 0.82fr) minmax(360px, 1.18fr);
-      gap: clamp(28px, 5vw, 72px);
-      align-items: center;
-      background: rgba(3, 5, 8, 0.3);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .console { min-height: 470px; padding: 18px; }
-    .console-top { display: flex; gap: 8px; margin-bottom: 16px; }
-    .console-top span { width: 12px; height: 12px; border-radius: 50%; background: var(--danger); }
-    .console-top span:nth-child(2) { background: var(--amber); }
-    .console-top span:nth-child(3) { background: var(--green); }
+    .persona-card {
+      min-height: 260px;
+      padding: 30px;
+      border: 1px solid var(--border-line);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--bg-card) 76%, transparent);
+    }
 
-    .console-grid {
+    .persona-card span {
+      color: var(--accent-aurora);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .persona-card h3 {
+      margin-top: 18px;
+      font-size: 26px;
+      line-height: 1.3;
+    }
+
+    .persona-card p {
+      margin-top: 16px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    .pricing-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .pricing-card {
+      min-height: 360px;
+      padding: 28px;
+      border: 1px solid var(--border-line);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--bg-card) 78%, transparent);
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(99, 232, 141, 0.45);
+      background: linear-gradient(180deg, rgba(99, 232, 141, 0.09), transparent 58%), color-mix(in srgb, var(--bg-card) 82%, transparent);
+    }
+
+    .pricing-label {
+      color: var(--accent-aurora);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .pricing-card h3 {
+      margin-top: 22px;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    .pricing-card .price {
+      margin-top: 16px;
+      color: var(--text-primary);
+      font-family: var(--mono);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .pricing-card p {
+      margin-top: 14px;
+      color: var(--text-secondary);
+      line-height: 1.78;
+    }
+
+    .pricing-card ul {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0 0;
+      padding: 0;
+      color: var(--text-secondary);
+      list-style: none;
+      line-height: 1.65;
+    }
+
+    .pricing-card li::before {
+      content: "✓";
+      margin-right: 9px;
+      color: var(--accent-aurora);
+      font-family: var(--mono);
+      font-weight: 900;
+    }
+
+    .mission-panel {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .mission-card,
+    .values-card {
+      padding: 28px;
+      border: 1px solid var(--border-line);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--bg-card) 76%, transparent);
+    }
+
+    .mission-card h3,
+    .values-card h3 {
+      color: var(--accent-aurora);
+      font-size: 24px;
+    }
+
+    .mission-card p,
+    .values-card p {
+      margin-top: 14px;
+      color: var(--text-secondary);
+      line-height: 1.82;
+    }
+
+    .values-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
+      margin-top: 18px;
     }
 
-    .console-panel {
-      position: relative;
-      min-height: 132px;
-      overflow: hidden;
+    .value-item {
       padding: 16px;
       border: 1px solid var(--border-line);
-      border-radius: 6px;
-      background: var(--generic-hover);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--bg-deep) 68%, transparent);
     }
 
-    .console-panel strong { display: block; margin-bottom: 16px; font-family: var(--mono); }
-    .console-panel.tall { min-height: 282px; }
-    .console-panel.wide { grid-column: 1 / -1; min-height: 120px; }
-    .bar {
-      display: inline-block;
-      width: 16%;
-      height: var(--h);
-      min-height: 54px;
-      margin-right: 5%;
-      vertical-align: bottom;
-      border-radius: 999px 999px 8px 8px;
-      background: linear-gradient(to top, var(--status-info), var(--accent-aurora));
-      box-shadow: var(--shadow-green);
-      animation: barWave 2.4s ease-in-out infinite alternate;
-    }
-
-    .ring {
-      position: absolute;
-      inset: 48px 28px 24px;
-      border: 18px solid rgba(0, 163, 255, 0.18);
-      border-top-color: var(--green);
-      border-right-color: var(--amber);
-      border-radius: 50%;
-      animation: spin 6s linear infinite;
-    }
-
-    .log-line {
+    .value-item strong {
       display: block;
-      margin: 6px 0;
-      color: var(--muted);
+      color: var(--text-primary);
       font-family: var(--mono);
       font-size: 13px;
     }
 
-    .persona-grid {
-      align-items: stretch;
+    .value-item span {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .metrics {
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .metric {
+      flex: 1 1 210px;
+      min-height: 108px;
+      padding: 20px;
+      border: 1px solid var(--border-line);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--bg-card) 78%, transparent);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent-aurora);
+      font-size: 34px;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-secondary);
+      font-weight: 700;
+    }
+
+    .cta-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: 32px;
+      border: 1px solid var(--border-line);
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--bg-card) 78%, transparent);
+    }
+
+    .cta-panel p {
+      margin-top: 12px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .site-footer {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 34px 20px 48px;
+      border-top: 1px solid var(--border-line);
+      color: var(--text-secondary);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-brand strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 18px;
+    }
+
+    .footer-brand span {
+      display: block;
+      margin-top: 8px;
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .footer-side {
+      display: grid;
+      justify-items: end;
       gap: 18px;
     }
 
-    .persona-card {
-      flex: 1 1 320px;
-      min-height: 300px;
-      padding: 26px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    .wechat-placeholder {
+      width: 118px;
+      padding: 10px;
+      border: 1px solid var(--border-line);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: inset 0 0 18px rgba(99, 232, 141, 0.05);
     }
 
-    .persona-card:hover {
-      transform: translateY(-6px);
-      border-color: color-mix(in srgb, var(--status-warning) 45%, var(--border-line));
-      box-shadow: var(--shadow-card), 0 0 0 1px rgba(255, 153, 0, 0.18);
-    }
-
-    .persona-card span { color: var(--green); font-family: var(--mono); font-weight: 900; }
-    .persona-card h3 { margin-top: 18px; }
-    .persona-card p { margin-top: 16px; color: var(--muted); line-height: 1.8; }
-
-    .cta-section { padding: 36px clamp(18px, 5vw, 72px) 86px; }
-    .cta-panel {
-      padding: clamp(30px, 5vw, 58px);
+    .qr-box {
+      width: 96px;
+      height: 96px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      border: 1px dashed rgba(99, 232, 141, 0.55);
       background:
-        linear-gradient(135deg, var(--accent-aurora-rgb-15), rgba(0, 163, 255, 0.08), rgba(255, 153, 0, 0.06)),
-        var(--panel);
+        linear-gradient(90deg, rgba(99, 232, 141, 0.16) 1px, transparent 1px),
+        linear-gradient(rgba(99, 232, 141, 0.16) 1px, transparent 1px),
+        var(--bg-card);
+      background-size: 12px 12px;
+      color: var(--accent-aurora);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0;
     }
 
-    .cta-panel::before {
-      content: "";
-      position: absolute;
-      inset: -45%;
-      background: conic-gradient(transparent, var(--accent-aurora-rgb-15), transparent, rgba(0, 163, 255, 0.14), transparent);
-      animation: spin 9s linear infinite;
+    .wechat-placeholder span {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-secondary);
+      font-size: 12px;
+      text-align: center;
     }
 
-    .cta-panel > * { position: relative; z-index: 1; }
-    .cta-panel p { max-width: 880px; margin-top: 14px; color: var(--muted); font-size: 18px; line-height: 1.78; }
-    .cta-actions { flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-
-    .reveal { opacity: 1; transform: translateY(0); }
-    body.motion .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    body.motion .reveal.is-visible, body.motion .hero .reveal { opacity: 1; transform: translateY(0); }
-
-    @property --angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
-    @keyframes logoOrbit { to { transform: rotateX(64deg) rotateZ(360deg); } }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes blink { 50% { opacity: 0; } }
-    @keyframes textFlow { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-    @keyframes sweep { 0%, 42% { transform: translateX(-120%); } 70%, 100% { transform: translateX(120%); } }
-    @keyframes stageFloat { 0%, 100% { transform: rotateY(-7deg) rotateX(4deg) translateY(0); } 50% { transform: rotateY(-4deg) rotateX(2deg) translateY(-14px); } }
-    @keyframes scanMove { from { transform: translateY(-20%); } to { transform: translateY(420%); } }
-    @keyframes linePulse { 0%, 100% { opacity: 0.5; transform: scaleX(0.92); } 50% { opacity: 1; transform: scaleX(1); } }
-    @keyframes borderTrace { to { --angle: 360deg; } }
-    @keyframes barWave { from { filter: brightness(0.86); transform: scaleY(0.84); } to { filter: brightness(1.16); transform: scaleY(1); } }
-
-    @media (max-width: 1200px) {
-      .engine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .footer-bottom {
+      margin-top: 26px;
+      color: var(--text-muted);
+      font-family: var(--mono);
+      font-size: 12px;
     }
 
-    @media (max-width: 980px) {
-      .site-header { grid-template-columns: 1fr; }
-      .nav { justify-content: flex-start; flex-wrap: wrap; white-space: normal; }
-      .header-controls { justify-content: flex-start; flex-wrap: wrap; }
-      .hero, .thesis, .console-section { grid-template-columns: 1fr; }
-      .hero { min-height: auto; }
-      .hero-stage { min-height: 460px; }
-      .stage-image img { min-height: 460px; }
-      .orbit { width: 340px; }
-      .orbit span { transform: rotate(calc(var(--i) * 60deg)) translate(140px) rotate(calc(var(--i) * -60deg)); }
+    @media (max-width: 1080px) {
+      .hero, .cta-panel { grid-template-columns: 1fr; }
+      .code-layout { grid-template-columns: 1fr; }
+      .task-panel { border-right: none; border-bottom: 1px solid var(--border-line); }
+      .feature-grid, .engine-grid, .pricing-grid, .mission-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .feature-card:nth-child(3n) { border-right: 1px solid var(--border-line); }
+      .feature-card:nth-child(2n) { border-right: none; }
     }
 
-    @media (max-width: 680px) {
-      .section { padding-top: 66px; padding-bottom: 66px; }
-      .brand-name small { display: none; }
-      .hero { padding-left: 24px; padding-right: 24px; overflow: hidden; }
-      h1 { font-size: clamp(44px, 15vw, 62px); }
-      .lead { max-width: 318px; font-size: 16px; }
-      .hero-actions, .cta-actions { align-items: stretch; flex-direction: column; }
-      .primary-action, .secondary-action, .nav-cta { width: 100%; }
-      .hero-stage { min-height: 390px; }
-      .stage-image { inset: 4% 0 0; transform: none; }
-      .stage-image img { min-height: 390px; }
-      .orbit { display: none; }
-      .status-feed { width: calc(100% - 24px); left: 12px; bottom: 12px; }
-      .engine-grid, .console-grid, .flow { grid-template-columns: 1fr; }
-      .engine-card { min-height: auto; }
-      .console-panel.wide { grid-column: auto; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    @media (max-width: 760px) {
+      .site-header {
+        grid-template-columns: 1fr;
+        align-items: start;
+        max-width: 100vw;
       }
+      .nav, .nav-actions { justify-content: flex-start; flex-wrap: wrap; }
+      .page-shell { max-width: 100vw; overflow: hidden; }
+      .hero { min-height: auto; padding-top: 48px; }
+      .hero-copy,
+      .code-window,
+      .section-head,
+      .feature-grid,
+      .engine-grid,
+      .persona-grid,
+      .metrics,
+      .cta-panel {
+        width: 100%;
+        max-width: 350px;
+      }
+      h1 { font-size: clamp(44px, 15vw, 68px); }
+      .subtitle { font-size: 24px; }
+      .lead,
+      .section-copy,
+      .feature-card p,
+      .engine-card p,
+      .persona-card p,
+      .task-list,
+      .terminal-log,
+      .command-box {
+        overflow-wrap: anywhere;
+      }
+      .feature-grid, .engine-grid, .persona-grid, .pricing-grid, .mission-panel, .values-list, .footer-inner { grid-template-columns: 1fr; }
+      .feature-card { border-right: none !important; }
+      .hero-actions, .btn-primary, .btn-secondary, .ghost-link { width: 100%; }
+      .footer-side { justify-items: start; }
+      .footer-links { justify-content: flex-start; }
     }
   </style>
 </head>
 <body data-theme="dark">
-  <canvas id="signalCanvas" aria-hidden="true"></canvas>
-
   <header class="site-header">
     <a class="brand" href="https://www.kaaaai.com/" aria-label="KaaaAi">
-      <span class="brand-mark"><span>K</span></span>
-      <span class="brand-name">
-        <strong data-i18n="brand">空来 KaaaAi</strong>
-        <small>AI MARKETING INFRA</small>
+      <span class="brand-logo" aria-label="Logo placeholder"></span>
+      <span class="brand-text">
+        <strong data-i18n="brand">空来</strong>
+        <small data-i18n="brand.tagline">对赌增长  无效不收费  超额共分成</small>
       </span>
     </a>
 
     <nav class="nav" aria-label="Main navigation">
-      <a href="#engines" data-i18n="nav.engines">核心引擎</a>
-      <a href="#asset" data-i18n="nav.asset">资产思维</a>
-      <a href="#console" data-i18n="nav.console">运营中枢</a>
-      <a href="#persona" data-i18n="nav.persona">精准狙击</a>
-      <a href="#contact" data-i18n="nav.contact">部署咨询</a>
+      <a href="#intro" data-i18n="nav.intro">介绍</a>
+      <a href="#features" data-i18n="nav.features">特色</a>
+      <a href="#engines" data-i18n="nav.engines">引擎</a>
+      <a href="#persona" data-i18n="nav.persona">场景</a>
+      <a href="#contact" data-i18n="nav.contact">部署</a>
     </nav>
 
-    <div class="header-controls">
-      <button class="control-btn" id="langToggle" type="button">EN</button>
-      <button class="control-btn" id="themeToggle" type="button">VOID</button>
-      <a class="nav-cta" href="#contact" data-i18n="nav.cta">启动增长基建</a>
+    <div class="nav-actions">
+      <button id="langToggle" type="button">EN</button>
+      <button class="theme-icon" id="themeToggle" type="button" aria-label="切换主题"></button>
+      <a class="ghost-link" href="#contact" data-i18n="nav.cta">咨询部署</a>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-copy reveal">
-        <div class="terminal" id="terminalLine" aria-live="polite"></div>
-        <p class="eyebrow" data-i18n="hero.eyebrow">KaaaAi Autopilot Marketing Infrastructure</p>
-        <h1><span data-i18n="hero.title1">底层基建</span><br><span data-i18n="hero.title2">驱动增长</span></h1>
-        <p class="lead" data-i18n="hero.lead">为您部署企业级 AI 营销软硬件基建，打造 7x24 小时无人值守引流系统。</p>
-        <div class="asset-core">
-          <strong data-i18n="hero.assetTitle">Asset over Effort // 资产思维</strong>
-          <span data-i18n="hero.assetBody">我们不是让团队每天重复搬运内容，而是把引流经验、竞品洞察、触达策略和门店 SOP 固化成可复制的数字化资产。</span>
-        </div>
+  <main class="page-shell">
+    <section class="hero" id="intro">
+      <div class="hero-copy">
+        <p class="kicker">KaaaAi // AI Marketing Infrastructure</p>
+        <h1><span class="brand-word">Kaaa</span><span class="accent-word">Ai</span></h1>
+        <p class="subtitle" data-i18n="hero.subtitle">在线 AI 营销基建平台</p>
+        <p class="lead" data-i18n="hero.lead">为传统实体店、连锁品牌和招商型企业部署企业级 AI 营销软硬件基建，把内容生产、线索采集、社媒触达、私域运营和数据复盘变成 7x24 小时无人值守引流系统。</p>
         <div class="hero-actions">
-          <a class="primary-action" href="#contact" data-i18n="hero.primary">请求部署演示</a>
-          <a class="secondary-action mono" href="https://www.kaaaai.com/">www.kaaaai.com</a>
+          <a class="btn-primary" href="#contact" data-i18n="hero.primary">开始使用</a>
         </div>
-        <div class="chips">
-          <span class="chip" data-i18n="hero.chip1">7x24 Autopilot</span>
-          <span class="chip" data-i18n="hero.chip2">Market Radar</span>
-          <span class="chip" data-i18n="hero.chip3">Private Domain OS</span>
+        <div class="tag-row">
+          <span class="tag">--asset-over-effort</span>
+          <span class="tag">--market-radar</span>
+          <span class="tag">--private-domain-os</span>
         </div>
       </div>
 
-      <div class="hero-stage reveal">
-        <div class="stage-image">
-          <img src="./assets/official-hero.png" alt="KaaaAi AI marketing console">
-          <span class="scan-line"></span>
+      <div class="code-window" aria-label="KaaaAi operating console">
+        <div class="window-bar">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span data-i18n="window.title">KaaaAi · 部署无人值守引流系统</span>
+          <span class="live">● LIVE</span>
         </div>
-        <div class="orbit" aria-hidden="true">
-          <span style="--i:0">SCAN</span>
-          <span style="--i:1">LEAD</span>
-          <span style="--i:2">POST</span>
-          <span style="--i:3">CRM</span>
-          <span style="--i:4">OPS</span>
-          <span style="--i:5">DATA</span>
-        </div>
-        <div class="status-feed" aria-label="runtime status">
-          <strong>RUNTIME_STATUS::ONLINE</strong>
-          <span data-i18n="feed.1">[scan] 竞品评论区信号采样中</span>
-          <span data-i18n="feed.2">[content] 社媒内容矩阵等待分发</span>
-          <span data-i18n="feed.3">[crm] 高意向客户进入私域队列</span>
-          <span data-i18n="feed.4">[ops] 异常任务已开启人工接管口</span>
+        <div class="code-layout">
+          <div class="task-panel">
+            <span class="model-pill">kai-7x24</span>
+            <h3 data-i18n="window.plan">计划分成 4 步：</h3>
+            <div class="task-list">
+              <p><strong>1.</strong><span data-i18n="window.step1">启动 <code>market-radar</code> 扫描公开平台和竞品评论区</span></p>
+              <p><strong>2.</strong><span data-i18n="window.step2">调用 <code>content-engine</code> 生成门店社媒内容矩阵</span></p>
+              <p><strong>3.</strong><span data-i18n="window.step3">执行 <code>engagement-stack</code> 完成评论、回复与私域引导</span></p>
+              <p><strong>4.</strong><span data-i18n="window.step4">写入 <code>ops-console</code> 输出线索、任务和转化复盘</span></p>
+            </div>
+            <div class="command-box">deploy kaaaai --store-chain --autopilot --asset-mode</div>
+            <div class="terminal-log">
+              <p><b>dev@kaaaai:~/growth $</b> npm run lead-radar</p>
+              <p>+ 56 capability nodes loaded</p>
+              <p>✓ autopilot system ready</p>
+            </div>
+          </div>
+          <div class="file-tree">
+            <strong>src</strong>
+            <span>market-radar.ts</span>
+            <span>content-engine.ts</span>
+            <span>engagement-stack.ts</span>
+            <span>private-domain.ts</span>
+            <span>franchise-os.ts</span>
+            <span>ops-console.ts</span>
+            <span>autopilot-runtime.ts</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="metric-grid" aria-label="platform metrics">
-      <article class="metric reveal"><strong data-counter data-target="24" data-suffix="h">0</strong><span data-i18n="metric.1">无人值守运行窗口</span></article>
-      <article class="metric reveal"><strong data-counter data-target="8">0</strong><span data-i18n="metric.2">AI 增长引擎</span></article>
-      <article class="metric reveal"><strong data-counter data-target="56">0</strong><span data-i18n="metric.3">标准能力节点</span></article>
-      <article class="metric reveal"><strong data-counter data-target="1" data-prefix="N:">0</strong><span data-i18n="metric.4">总部到门店复制</span></article>
-    </section>
-
-    <section class="section" id="asset">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="asset.eyebrow">INFRASTRUCTURE MINDSET</p>
-        <h2 data-i18n="asset.title">把一次性的人工努力，升级成可部署、可复制、可计费的营销基础设施。</h2>
-        <p class="section-copy" data-i18n="asset.copy">空来 KaaaAi 将内容生产、市场情报、自动触达、私域跟进、招商赋能和数据复盘压缩进同一套中台，让老板看到的是结果，让系统承担重复动作。</p>
+    <section class="section" id="features">
+      <div class="section-head">
+        <span class="section-num">01 // FEATURES</span>
+        <h2 data-i18n="features.title">功能与特色</h2>
+        <p class="section-copy" data-i18n="features.copy">你不需要自己拼工具、搭环境、来回切流程。把引流需求交给 KaaaAi，它会从市场情报到私域运营一路接住，真正把 AI 营销变成可持续的工作流。</p>
       </div>
-      <div class="thesis">
-        <article class="thesis-card reveal">
-          <strong>01 // Asset over Effort</strong>
-          <p data-i18n="asset.card1">把老板个人经验、单店获客方法、优秀员工话术和总部招商策略沉淀为可授权、可培训、可持续维护的数字资产。</p>
-        </article>
-        <div class="flow reveal" aria-label="growth pipeline">
-          <article><strong>01_SCAN</strong><span data-i18n="flow.1">市场情报与竞品监控</span></article>
-          <article><strong>02_GENERATE</strong><span data-i18n="flow.2">全自动社媒内容分发</span></article>
-          <article><strong>03_INTERCEPT</strong><span data-i18n="flow.3">评论区与目标账号触达</span></article>
-          <article><strong>04_COMPOUND</strong><span data-i18n="flow.4">私域沉淀与复购复盘</span></article>
-        </div>
-      </div>
+      <div class="feature-grid" id="featureGrid"></div>
     </section>
 
     <section class="section" id="engines">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="engines.eyebrow">CORE MODULES // BENTO INFRA GRID</p>
-        <h2 data-i18n="engines.title">八个底层引擎，把获客动作封装成可运行的企业级营销协议栈。</h2>
+      <div class="section-head">
+        <span class="section-num">02 // ENGINES</span>
+        <h2 data-i18n="engines.title">八大 AI 增长引擎</h2>
+        <p class="section-copy" data-i18n="engines.copy">从获客动作到管理后台，KaaaAi 把门店增长拆成清晰的底层模块，每个模块都能单独运行，也能组合成总部到门店的复制系统。</p>
       </div>
       <div class="engine-grid" id="engineGrid"></div>
     </section>
 
-    <section class="section console-section" id="console">
-      <div class="console-copy reveal">
-        <p class="eyebrow" data-i18n="console.eyebrow">DATA OPS CONSOLE</p>
-        <h2 data-i18n="console.title">硬核数据中枢：每一次内容、线索、触达和转化都有运行日志。</h2>
-        <p class="section-copy" data-i18n="console.copy">老板不需要懂技术，只需要看结果。总部看到全局策略，门店看到本地任务，系统持续记录内容发布、线索增长、客户互动、销售跟进和异常接管。</p>
-      </div>
-      <div class="console reveal">
-        <div class="console-top"><span></span><span></span><span></span></div>
-        <div class="console-grid">
-          <div class="console-panel tall">
-            <strong>LEAD_POOL_LOAD</strong>
-            <i class="bar" style="--h:78%"></i>
-            <i class="bar" style="--h:46%"></i>
-            <i class="bar" style="--h:64%"></i>
-            <i class="bar" style="--h:88%"></i>
-          </div>
-          <div class="console-panel">
-            <strong>INTENT_SCORE</strong>
-            <b class="ring"></b>
-          </div>
-          <div class="console-panel">
-            <strong>RUNTIME_LOG</strong>
-            <span class="log-line">[OK] content.matrix.sync</span>
-            <span class="log-line">[OK] market.radar.scan</span>
-            <span class="log-line">[WARN] manual.review.wait</span>
-          </div>
-          <div class="console-panel wide">
-            <strong>AUTOPILOT_GUARD</strong>
-            <span class="log-line">failover.ready // human_takeover.enabled // browser_task.recoverable</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="persona">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="persona.eyebrow">PRECISION PERSONA TARGETING</p>
-        <h2 data-i18n="persona.title">两类高价值客户，直接命中底层诉求。</h2>
+      <div class="section-head">
+        <span class="section-num">03 // SCENARIOS</span>
+        <h2 data-i18n="persona.title">适合谁</h2>
       </div>
       <div class="persona-grid" id="personaGrid"></div>
+      <div class="metrics">
+        <article class="metric"><strong>24h</strong><span data-i18n="metric.1">无人值守运行窗口</span></article>
+        <article class="metric"><strong>8</strong><span data-i18n="metric.2">AI 增长引擎</span></article>
+        <article class="metric"><strong>56</strong><span data-i18n="metric.3">标准能力节点</span></article>
+        <article class="metric"><strong>N:1</strong><span data-i18n="metric.4">总部到门店复制</span></article>
+      </div>
     </section>
 
-    <section class="cta-section" id="contact">
-      <div class="cta-panel reveal">
-        <p class="eyebrow">DEPLOYMENT REQUEST</p>
-        <h2 data-i18n="cta.title">空来 KaaaAi 是传统实体与连锁品牌的 AI 增长架构师。</h2>
-        <p data-i18n="cta.copy">我们帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的无人值守引流系统。</p>
-        <div class="cta-actions">
-          <a class="primary-action" href="https://www.kaaaai.com/" data-i18n="cta.primary">访问官网地址</a>
-          <a class="secondary-action mono" href="https://www.kaaaai.com/">www.kaaaai.com</a>
+    <section class="section" id="pricing">
+      <div class="section-head">
+        <span class="section-num">04 // PRICING & MISSION</span>
+        <h2 data-i18n="pricing.title">不是卖人天，而是部署增长基建。</h2>
+        <p class="section-copy" data-i18n="pricing.copy">空来不接零散外包需求。我们把大厂级算法分发、数据抓取和自动化触达能力，封装成实体店老板开箱即用的 AI 营销软硬件基建。</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <span class="pricing-label" data-i18n="pricing.card1.label">诊断部署</span>
+          <h3 data-i18n="pricing.card1.title">单店增长启动包</h3>
+          <div class="price" data-i18n="pricing.card1.price">按场景评估</div>
+          <p data-i18n="pricing.card1.copy">为高客单实体店快速搭建内容、线索、触达和私域跟进闭环。</p>
+          <ul>
+            <li data-i18n="pricing.card1.item1">门店获客流程诊断</li>
+            <li data-i18n="pricing.card1.item2">AI 内容与线索雷达配置</li>
+            <li data-i18n="pricing.card1.item3">私域跟进话术与看板</li>
+          </ul>
+        </article>
+        <article class="pricing-card featured">
+          <span class="pricing-label" data-i18n="pricing.card2.label">推荐方案</span>
+          <h3 data-i18n="pricing.card2.title">增长基建托管</h3>
+          <div class="price" data-i18n="pricing.card2.price">年度系统维护</div>
+          <p data-i18n="pricing.card2.copy">让顶尖数字营销自动化技术成为每一家实体店的开箱即用基础设施。</p>
+          <ul>
+            <li data-i18n="pricing.card2.item1">7x24 无人值守引流系统</li>
+            <li data-i18n="pricing.card2.item2">算法分发、数据抓取与自动触达</li>
+            <li data-i18n="pricing.card2.item3">异常提醒与人工接管机制</li>
+          </ul>
+        </article>
+        <article class="pricing-card">
+          <span class="pricing-label" data-i18n="pricing.card3.label">连锁招商</span>
+          <h3 data-i18n="pricing.card3.title">总部级加盟 OS</h3>
+          <div class="price" data-i18n="pricing.card3.price">总部方案定制</div>
+          <p data-i18n="pricing.card3.copy">把总部的成功单店模型固化成可复制的数字化招商资产。</p>
+          <ul>
+            <li data-i18n="pricing.card3.item1">总部统一营销资产库</li>
+            <li data-i18n="pricing.card3.item2">加盟门店本地化执行</li>
+            <li data-i18n="pricing.card3.item3">系统维护费与服务收入模型</li>
+          </ul>
+        </article>
+      </div>
+      <div class="mission-panel">
+        <article class="mission-card">
+          <span class="section-num" data-i18n="mission.label">企业使命</span>
+          <h3 data-i18n="mission.title">让 AI 增长能力平民化。</h3>
+          <p data-i18n="mission.copy">消除技术壁垒，把大厂级别的算法分发、数据抓取和自动化触达能力，用最低成本赋能给线下实体店。</p>
+        </article>
+        <article class="mission-card">
+          <span class="section-num" data-i18n="vision.label">长期愿景</span>
+          <h3 data-i18n="vision.title">成为无人值守引流系统的首选外脑。</h3>
+          <p data-i18n="vision.copy">未来，每一个开放加盟的传统品牌，标准配置不再只是装修图纸和设备，还必须标配一套由空来驱动的 AI 流量引擎。</p>
+        </article>
+      </div>
+      <div class="values-card">
+        <span class="section-num" data-i18n="values.label">价值观</span>
+        <div class="values-list">
+          <div class="value-item"><strong data-i18n="values.1.title">实战为王</strong><span data-i18n="values.1.copy">所有交付方案必须先由我们自己打磨跑通。</span></div>
+          <div class="value-item"><strong data-i18n="values.2.title">资产思维</strong><span data-i18n="values.2.copy">把个人引流经验固化成可复制的招商资产。</span></div>
+          <div class="value-item"><strong data-i18n="values.3.title">克制与转化</strong><span data-i18n="values.3.copy">流量不是目的，留量、复购和转介绍才是。</span></div>
+          <div class="value-item"><strong data-i18n="values.4.title">极简交付</strong><span data-i18n="values.4.copy">不要求客户懂技术，只交付直观界面和数据大屏。</span></div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="cta-panel">
+        <div>
+          <span class="section-num">05 // DEPLOYMENT</span>
+          <h2 data-i18n="cta.title">把获客经验固化成可复制的数字化资产。</h2>
+          <p data-i18n="cta.copy">空来 KaaaAi 帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的无人值守引流系统。</p>
+        </div>
+        <a class="btn-primary" href="https://www.kaaaai.com/" data-i18n="cta.primary">访问官网</a>
       </div>
     </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong data-i18n="footer.brand">空来 KongLai</strong>
+        <span data-i18n="footer.tagline">流量破局，客从空来。</span>
+        <p data-i18n="footer.copy">传统实体与连锁品牌的 AI 增长架构师，专注把无人值守引流系统变成可复制、可管理、可持续放大的数字化资产。</p>
+      </div>
+      <div class="footer-side">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#intro" data-i18n="nav.intro">介绍</a>
+          <a href="#features" data-i18n="nav.features">特色</a>
+          <a href="#engines" data-i18n="nav.engines">引擎</a>
+          <a href="#persona" data-i18n="nav.persona">场景</a>
+          <a href="#pricing" data-i18n="footer.pricing">价格与使命</a>
+        </nav>
+        <div class="wechat-placeholder" aria-label="WeChat QR code placeholder">
+          <div class="qr-box">QR</div>
+          <span data-i18n="footer.wechat">微信二维码占位</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 KaaaAi. AI Marketing Infrastructure for physical stores.</span>
+      <span>www.kaaaai.com</span>
+    </div>
+  </footer>
+
   <script>
     const I18N = {
       zh: {
-        brand: "空来 KaaaAi",
-        "nav.engines": "核心引擎",
-        "nav.asset": "资产思维",
-        "nav.console": "运营中枢",
-        "nav.persona": "精准狙击",
-        "nav.contact": "部署咨询",
-        "nav.cta": "启动增长基建",
-        "hero.eyebrow": "KaaaAi Autopilot Marketing Infrastructure",
-        "hero.title1": "底层基建",
-        "hero.title2": "驱动增长",
-        "hero.lead": "为您部署企业级 AI 营销软硬件基建，打造 7x24 小时无人值守引流系统。",
-        "hero.assetTitle": "Asset over Effort // 资产思维",
-        "hero.assetBody": "我们不是让团队每天重复搬运内容，而是把引流经验、竞品洞察、触达策略和门店 SOP 固化成可复制的数字化资产。",
-        "hero.primary": "请求部署演示",
-        "hero.chip1": "7x24 无人值守",
-        "hero.chip2": "市场情报雷达",
-        "hero.chip3": "私域运营系统",
-        "feed.1": "[scan] 竞品评论区信号采样中",
-        "feed.2": "[content] 社媒内容矩阵等待分发",
-        "feed.3": "[crm] 高意向客户进入私域队列",
-        "feed.4": "[ops] 异常任务已开启人工接管口",
+        brand: "空来",
+        "brand.tagline": "对赌增长  无效不收费  超额共分成",
+        "nav.intro": "介绍",
+        "nav.features": "特色",
+        "nav.engines": "引擎",
+        "nav.persona": "场景",
+        "nav.contact": "部署",
+        "nav.cta": "咨询部署",
+        "hero.subtitle": "在线 AI 营销基建平台",
+        "hero.lead": "为传统实体店、连锁品牌和招商型企业部署企业级 AI 营销软硬件基建，把内容生产、线索采集、社媒触达、私域运营和数据复盘变成 7x24 小时无人值守引流系统。",
+        "hero.primary": "开始使用",
+        "window.title": "KaaaAi · 部署无人值守引流系统",
+        "window.plan": "计划分成 4 步：",
+        "window.step1": "启动 market-radar 扫描公开平台和竞品评论区",
+        "window.step2": "调用 content-engine 生成门店社媒内容矩阵",
+        "window.step3": "执行 engagement-stack 完成评论、回复与私域引导",
+        "window.step4": "写入 ops-console 输出线索、任务和转化复盘",
+        "features.title": "功能与特色",
+        "features.copy": "你不需要自己拼工具、搭环境、来回切流程。把引流需求交给 KaaaAi，它会从市场情报到私域运营一路接住，真正把 AI 营销变成可持续的工作流。",
+        "engines.title": "八大 AI 增长引擎",
+        "engines.copy": "从获客动作到管理后台，KaaaAi 把门店增长拆成清晰的底层模块，每个模块都能单独运行，也能组合成总部到门店的复制系统。",
+        "persona.title": "适合谁",
         "metric.1": "无人值守运行窗口",
         "metric.2": "AI 增长引擎",
         "metric.3": "标准能力节点",
         "metric.4": "总部到门店复制",
-        "asset.eyebrow": "INFRASTRUCTURE MINDSET",
-        "asset.title": "把一次性的人工努力，升级成可部署、可复制、可计费的营销基础设施。",
-        "asset.copy": "空来 KaaaAi 将内容生产、市场情报、自动触达、私域跟进、招商赋能和数据复盘压缩进同一套中台，让老板看到的是结果，让系统承担重复动作。",
-        "asset.card1": "把老板个人经验、单店获客方法、优秀员工话术和总部招商策略沉淀为可授权、可培训、可持续维护的数字资产。",
-        "flow.1": "市场情报与竞品监控",
-        "flow.2": "全自动社媒内容分发",
-        "flow.3": "评论区与目标账号触达",
-        "flow.4": "私域沉淀与复购复盘",
-        "engines.eyebrow": "CORE MODULES // BENTO INFRA GRID",
-        "engines.title": "八个底层引擎，把获客动作封装成可运行的企业级营销协议栈。",
-        "console.eyebrow": "DATA OPS CONSOLE",
-        "console.title": "硬核数据中枢：每一次内容、线索、触达和转化都有运行日志。",
-        "console.copy": "老板不需要懂技术，只需要看结果。总部看到全局策略，门店看到本地任务，系统持续记录内容发布、线索增长、客户互动、销售跟进和异常接管。",
-        "persona.eyebrow": "PRECISION PERSONA TARGETING",
-        "persona.title": "两类高价值客户，直接命中底层诉求。",
-        "cta.title": "空来 KaaaAi 是传统实体与连锁品牌的 AI 增长架构师。",
-        "cta.copy": "我们帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的无人值守引流系统。",
-        "cta.primary": "访问官网地址"
+        "pricing.title": "不是卖人天，而是部署增长基建。",
+        "pricing.copy": "空来不接零散外包需求。我们把大厂级算法分发、数据抓取和自动化触达能力，封装成实体店老板开箱即用的 AI 营销软硬件基建。",
+        "pricing.card1.label": "诊断部署",
+        "pricing.card1.title": "单店增长启动包",
+        "pricing.card1.price": "按场景评估",
+        "pricing.card1.copy": "为高客单实体店快速搭建内容、线索、触达和私域跟进闭环。",
+        "pricing.card1.item1": "门店获客流程诊断",
+        "pricing.card1.item2": "AI 内容与线索雷达配置",
+        "pricing.card1.item3": "私域跟进话术与看板",
+        "pricing.card2.label": "推荐方案",
+        "pricing.card2.title": "增长基建托管",
+        "pricing.card2.price": "年度系统维护",
+        "pricing.card2.copy": "让顶尖数字营销自动化技术成为每一家实体店的开箱即用基础设施。",
+        "pricing.card2.item1": "7x24 无人值守引流系统",
+        "pricing.card2.item2": "算法分发、数据抓取与自动触达",
+        "pricing.card2.item3": "异常提醒与人工接管机制",
+        "pricing.card3.label": "连锁招商",
+        "pricing.card3.title": "总部级加盟 OS",
+        "pricing.card3.price": "总部方案定制",
+        "pricing.card3.copy": "把总部的成功单店模型固化成可复制的数字化招商资产。",
+        "pricing.card3.item1": "总部统一营销资产库",
+        "pricing.card3.item2": "加盟门店本地化执行",
+        "pricing.card3.item3": "系统维护费与服务收入模型",
+        "mission.label": "企业使命",
+        "mission.title": "让 AI 增长能力平民化。",
+        "mission.copy": "消除技术壁垒，把大厂级别的算法分发、数据抓取和自动化触达能力，用最低成本赋能给线下实体店。",
+        "vision.label": "长期愿景",
+        "vision.title": "成为无人值守引流系统的首选外脑。",
+        "vision.copy": "未来，每一个开放加盟的传统品牌，标准配置不再只是装修图纸和设备，还必须标配一套由空来驱动的 AI 流量引擎。",
+        "values.label": "价值观",
+        "values.1.title": "实战为王",
+        "values.1.copy": "所有交付方案必须先由我们自己打磨跑通。",
+        "values.2.title": "资产思维",
+        "values.2.copy": "把个人引流经验固化成可复制的招商资产。",
+        "values.3.title": "克制与转化",
+        "values.3.copy": "流量不是目的，留量、复购和转介绍才是。",
+        "values.4.title": "极简交付",
+        "values.4.copy": "不要求客户懂技术，只交付直观界面和数据大屏。",
+        "footer.brand": "空来 KongLai",
+        "footer.tagline": "流量破局，客从空来。",
+        "footer.copy": "传统实体与连锁品牌的 AI 增长架构师，专注把无人值守引流系统变成可复制、可管理、可持续放大的数字化资产。",
+        "footer.pricing": "价格与使命",
+        "footer.wechat": "微信二维码占位",
+        "footer.copyright": "© 2026 KaaaAi. AI Marketing Infrastructure for physical stores.",
+        "cta.title": "把获客经验固化成可复制的数字化资产。",
+        "cta.copy": "空来 KaaaAi 帮助门店把内容生产、精准获客、智能触达、私域转化和数据复盘变成一套可复制的无人值守引流系统。",
+        "cta.primary": "访问官网"
       },
       en: {
-        brand: "KaaaAi",
+        brand: "Konglai",
+        "brand.tagline": "Growth wager. No result, no fee. Upside shared.",
+        "nav.intro": "Intro",
+        "nav.features": "Features",
         "nav.engines": "Engines",
-        "nav.asset": "Asset Logic",
-        "nav.console": "Ops Console",
-        "nav.persona": "Personas",
+        "nav.persona": "Scenarios",
         "nav.contact": "Deploy",
-        "nav.cta": "Start Infra",
-        "hero.eyebrow": "KaaaAi Autopilot Marketing Infrastructure",
-        "hero.title1": "Infra Core",
-        "hero.title2": "Growth OS",
-        "hero.lead": "Deploy enterprise-grade AI marketing hardware and software infrastructure for a 7x24 autopilot acquisition system.",
-        "hero.assetTitle": "Asset over Effort",
-        "hero.assetBody": "We turn acquisition know-how, competitor intelligence, outreach protocols and store SOPs into reusable digital assets instead of daily manual repetition.",
-        "hero.primary": "Request Deployment Demo",
-        "hero.chip1": "7x24 Autopilot",
-        "hero.chip2": "Market Radar",
-        "hero.chip3": "Private Domain OS",
-        "feed.1": "[scan] competitor comment signals sampled",
-        "feed.2": "[content] social content matrix queued",
-        "feed.3": "[crm] high-intent leads routed to CRM",
-        "feed.4": "[ops] human takeover port enabled",
+        "nav.cta": "Consult Us",
+        "hero.subtitle": "Online AI Marketing Infrastructure",
+        "hero.lead": "Deploy enterprise-grade AI marketing infrastructure for physical stores, chain brands and franchise businesses, turning content, leads, outreach, private-domain operations and data review into a 7x24 autopilot acquisition system.",
+        "hero.primary": "Start Using",
+        "window.title": "KaaaAi · Deploy autopilot acquisition system",
+        "window.plan": "Plan split into 4 steps:",
+        "window.step1": "Start market-radar to scan public platforms and competitor comments",
+        "window.step2": "Call content-engine to generate store social content matrix",
+        "window.step3": "Run engagement-stack for comments, replies and private-domain routing",
+        "window.step4": "Write ops-console review for leads, tasks and conversions",
+        "features.title": "Functions and Features",
+        "features.copy": "No need to stitch tools, configure environments or switch workflows. Give KaaaAi the acquisition goal and it carries the path from market intelligence to private-domain operations.",
+        "engines.title": "Eight AI Growth Engines",
+        "engines.copy": "KaaaAi turns store growth into clear infrastructure modules. Each module can run alone or combine into a replicable HQ-to-store system.",
+        "persona.title": "Who It Is For",
         "metric.1": "Autopilot runtime window",
         "metric.2": "AI growth engines",
         "metric.3": "Standard capability nodes",
         "metric.4": "HQ-to-store replication",
-        "asset.eyebrow": "INFRASTRUCTURE MINDSET",
-        "asset.title": "Upgrade one-off manual effort into deployable, repeatable and billable marketing infrastructure.",
-        "asset.copy": "KaaaAi compresses content generation, market intelligence, automated outreach, private-domain follow-up, franchise enablement and data review into one operating console.",
-        "asset.card1": "Convert founder know-how, single-store acquisition playbooks, top staff scripts and HQ franchise strategies into licensable, trainable and maintainable digital assets.",
-        "flow.1": "Market intelligence and competitor monitoring",
-        "flow.2": "Automated social content distribution",
-        "flow.3": "Comment-zone and target-account outreach",
-        "flow.4": "Private-domain compounding and review",
-        "engines.eyebrow": "CORE MODULES // BENTO INFRA GRID",
-        "engines.title": "Eight low-level engines package acquisition work into a runnable enterprise marketing stack.",
-        "console.eyebrow": "DATA OPS CONSOLE",
-        "console.title": "A hardcore data console: every content, lead, outreach and conversion action leaves a runtime log.",
-        "console.copy": "Owners do not need to understand the technology. HQ sees global strategy, stores see local tasks, and the system records posting, lead growth, customer interaction, sales follow-up and exception takeover.",
-        "persona.eyebrow": "PRECISION PERSONA TARGETING",
-        "persona.title": "Two high-value personas, hit at the infrastructure level.",
-        "cta.title": "KaaaAi is the AI growth architect for physical businesses and chain brands.",
-        "cta.copy": "We help stores convert content production, precise acquisition, intelligent outreach, private-domain conversion and data review into a repeatable autopilot acquisition system.",
-        "cta.primary": "Visit Official Site"
+        "pricing.title": "We do not sell labor hours. We deploy growth infrastructure.",
+        "pricing.copy": "KaaaAi does not take scattered outsourcing requests. We package algorithmic distribution, data capture and automated outreach into out-of-box AI marketing infrastructure for store owners.",
+        "pricing.card1.label": "Diagnostic",
+        "pricing.card1.title": "Single-store launch",
+        "pricing.card1.price": "Scoped by scenario",
+        "pricing.card1.copy": "Build the content, lead, outreach and private-domain follow-up loop for high-ticket physical stores.",
+        "pricing.card1.item1": "Store acquisition workflow diagnosis",
+        "pricing.card1.item2": "AI content and lead radar setup",
+        "pricing.card1.item3": "Private-domain scripts and dashboard",
+        "pricing.card2.label": "Recommended",
+        "pricing.card2.title": "Growth infrastructure care",
+        "pricing.card2.price": "Annual system service",
+        "pricing.card2.copy": "Make top-tier digital marketing automation an out-of-box infrastructure layer for every store.",
+        "pricing.card2.item1": "7x24 autopilot acquisition system",
+        "pricing.card2.item2": "Algorithmic distribution, data capture and outreach",
+        "pricing.card2.item3": "Exception alerts and human handoff",
+        "pricing.card3.label": "Franchise",
+        "pricing.card3.title": "HQ franchise OS",
+        "pricing.card3.price": "HQ solution design",
+        "pricing.card3.copy": "Turn the successful single-store model into a reusable digital franchise asset.",
+        "pricing.card3.item1": "Central marketing asset library",
+        "pricing.card3.item2": "Localized execution for franchise stores",
+        "pricing.card3.item3": "System maintenance and service revenue model",
+        "mission.label": "Mission",
+        "mission.title": "Democratize AI growth capability.",
+        "mission.copy": "Remove technical barriers and empower physical stores with enterprise-grade algorithmic distribution, data capture and automated outreach at lower cost.",
+        "vision.label": "Vision",
+        "vision.title": "Become the first external brain for unattended acquisition systems.",
+        "vision.copy": "For every traditional brand that opens franchising, the standard setup should include a KaaaAi-powered traffic engine alongside decoration plans and equipment.",
+        "values.label": "Values",
+        "values.1.title": "Eat our own dog food",
+        "values.1.copy": "Every delivered system must be tested and proven by us first.",
+        "values.2.title": "Asset over Effort",
+        "values.2.copy": "Turn founder know-how into reusable franchise assets.",
+        "values.3.title": "Conversion Focus",
+        "values.3.copy": "Traffic is not the goal. Retention, repurchase and referral are.",
+        "values.4.title": "Simplicity",
+        "values.4.copy": "Customers do not need to understand the tech. They get clear UI and dashboards.",
+        "footer.brand": "KongLai KaaaAi",
+        "footer.tagline": "Traffic breakthrough. Customers arrive.",
+        "footer.copy": "The AI growth architect for physical stores and chain brands, turning unattended acquisition systems into reusable and scalable digital assets.",
+        "footer.pricing": "Pricing & Mission",
+        "footer.wechat": "WeChat QR placeholder",
+        "footer.copyright": "© 2026 KaaaAi. AI Marketing Infrastructure for physical stores.",
+        "cta.title": "Turn acquisition know-how into reusable digital assets.",
+        "cta.copy": "KaaaAi helps stores convert content production, precise acquisition, intelligent outreach, private-domain conversion and data review into a repeatable autopilot acquisition system.",
+        "cta.primary": "Visit Site"
       }
     };
 
+    const FEATURES = [
+      {
+        zh: ["免费即用", "--zero-install", "浏览器打开即可使用，无需先搭建复杂营销系统，让实体老板先看到获客流程。"],
+        en: ["Ready to use", "--zero-install", "Open the browser and start without assembling a complex marketing stack."]
+      },
+      {
+        zh: ["云端营销环境", "--cloud --dedicated", "内容、线索、触达和复盘在同一套工作流里运行，减少跨工具切换。"],
+        en: ["Cloud marketing workspace", "--cloud --dedicated", "Content, leads, outreach and review run in one operating flow."]
+      },
+      {
+        zh: ["资产思维", "--asset-over-effort", "把老板经验、门店 SOP 和优秀话术沉淀成可复制、可培训、可维护的数字资产。"],
+        en: ["Asset over effort", "--asset-over-effort", "Turn founder knowledge, store SOPs and strong scripts into repeatable digital assets."]
+      },
+      {
+        zh: ["多平台线索雷达", "--market-radar", "从公开平台、竞品账号、评论区和关键词中发现正在表达需求的人。"],
+        en: ["Market radar", "--market-radar", "Discover demand signals from public platforms, competitors, comments and keywords."]
+      },
+      {
+        zh: ["总部到门店复制", "--franchise-os", "总部统一策略，门店本地化执行，让招商不只卖品牌，也卖获客系统。"],
+        en: ["HQ-to-store replication", "--franchise-os", "HQ controls strategy while stores localize execution."]
+      },
+      {
+        zh: ["无人值守运行", "--autopilot-runtime", "定时采集、内容生成、发布准备、异常提醒和人工接管形成持续运行链路。"],
+        en: ["Autopilot runtime", "--autopilot-runtime", "Scheduled collection, generation, preparation, alerts and takeover form a continuous loop."]
+      }
+    ];
+
     const ENGINES = [
       {
-        zh: {
-          title: "实时市场情报与竞品监控雷达",
-          enTitle: "Market Intelligence Radar",
-          summary: "主动发现正在讨论、搜索、关注相关服务的潜在客户与竞品信号。",
-          abilities: ["多平台公开内容采集", "竞品账号与评论区线索发现", "目标客户关键词监控", "行业趋势与用户需求分析", "X、LinkedIn、YouTube 等海外平台账号线索整理", "线索去重、分类、标签化", "高意向线索优先级排序"],
-          pain: "老板知道客户在平台上，但不知道谁正在表达需求、谁值得优先跟进。"
-        },
-        en: {
-          title: "Market Intelligence Radar",
-          enTitle: "Real-time competitor and demand monitoring",
-          summary: "Detect customer demand, competitor signals and high-intent opportunities across public channels.",
-          abilities: ["Multi-platform public content collection", "Competitor account and comment-zone lead discovery", "Target keyword monitoring", "Industry trend and demand analysis", "X, LinkedIn and YouTube account intelligence", "Lead deduplication, classification and tagging", "High-intent lead prioritization"],
-          pain: "Owners know customers are on platforms, but cannot tell who has demand and who should be followed first."
-        }
+        zh: ["实时市场情报与竞品监控雷达", "Market Intelligence Radar", "主动发现正在讨论、搜索、关注相关服务的潜在客户与竞品信号。", ["多平台公开内容采集", "竞品账号与评论区线索发现", "目标客户关键词监控"]],
+        en: ["Market Intelligence Radar", "Real-time competitor monitoring", "Detect customer demand and competitor signals across public channels.", ["Public content collection", "Competitor comment-zone discovery", "Target keyword monitoring"]]
       },
       {
-        zh: {
-          title: "全自动社媒内容分发矩阵",
-          enTitle: "Automated Content Engine",
-          summary: "让门店每天都有内容可发、有话题可讲、有素材可用，并进入可分发矩阵。",
-          abilities: ["热点选题生成", "小红书、抖音、视频号、公众号内容文案", "SEO 标题、摘要、关键词优化", "多语言营销内容生成", "图文内容排版", "封面图、配图、营销视觉素材生成", "短视频素材整理、竖屏成片、封面与发布文案生成"],
-          pain: "门店不会写文案、不会拍短视频，也没有预算长期养一个新媒体团队。"
-        },
-        en: {
-          title: "Automated Content Engine",
-          enTitle: "Full-auto social distribution matrix",
-          summary: "Keep every store supplied with topics, copy, visuals and short-video packages ready for distribution.",
-          abilities: ["Trending topic generation", "Copy for Xiaohongshu, Douyin, WeChat Channels and public accounts", "SEO title, summary and keyword optimization", "Multilingual marketing content generation", "Graphic content layout", "Cover, illustration and marketing visual generation", "Short-video material organization, vertical edits and publishing copy"],
-          pain: "Stores cannot write, shoot or plan daily posts, and cannot maintain a full media team."
-        }
+        zh: ["全自动社媒内容分发矩阵", "Automated Content Engine", "让门店每天都有内容可发、有话题可讲、有素材可用。", ["热点选题生成", "社媒内容文案", "短视频素材整理"]],
+        en: ["Automated Content Engine", "Social distribution matrix", "Keep every store supplied with topics, copy and video packages.", ["Topic generation", "Social copy generation", "Short-video material packaging"]]
       },
       {
-        zh: {
-          title: "AI 社媒触达协议栈",
-          enTitle: "Social Engagement Stack",
-          summary: "让品牌不再只靠人工刷平台、手动评论、手动私信。",
-          abilities: ["AI 评论生成", "AI 回复生成", "竞品评论区智能截流", "目标账号自动关注与互动", "个性化称呼与话术替换", "图片、表情、结尾语气控制", "互动频率、随机行为、防机械化参数控制"],
-          pain: "员工执行不稳定，评论质量差，人工触达效率低，老板无法复制稳定引流动作。"
-        },
-        en: {
-          title: "Social Engagement Stack",
-          enTitle: "AI outreach protocol layer",
-          summary: "Replace manual scrolling, commenting and messaging with controlled AI-assisted engagement.",
-          abilities: ["AI comment generation", "AI reply generation", "Competitor comment interception", "Target-account follow and interaction", "Personalized names and script substitution", "Image, emoji and ending-tone control", "Frequency, randomness and anti-mechanical behavior control"],
-          pain: "Execution is inconsistent, comments are weak, and manual outreach cannot become a repeatable playbook."
-        }
+        zh: ["AI 社媒触达协议栈", "Social Engagement Stack", "把评论、回复、关注和私域引导变成稳定执行动作。", ["AI 评论生成", "竞品评论区截流", "频率与随机行为控制"]],
+        en: ["Social Engagement Stack", "AI outreach protocol", "Turn comments, replies, follows and routing into stable execution.", ["AI comments", "Competitor comment interception", "Frequency and randomness control"]]
       },
       {
-        zh: {
-          title: "AI 私域生命周期控制器",
-          enTitle: "Private Domain CRM Autopilot",
-          summary: "把流量变成留量，把一次到店变成持续复购。",
-          abilities: ["客户标签管理", "客户来源记录", "客户兴趣与需求归类", "复购提醒", "跟进任务提醒", "自动生成私域话术", "客户生命周期运营"],
-          pain: "老客户没有被持续运营，员工离职带走客户，老板不知道客户从哪里来。"
-        },
-        en: {
-          title: "Private Domain CRM Autopilot",
-          enTitle: "Lifecycle retention controller",
-          summary: "Turn traffic into owned relationships and one-time visits into recurring purchase cycles.",
-          abilities: ["Customer tag management", "Source tracking", "Interest and demand classification", "Repurchase reminders", "Follow-up task reminders", "Private-domain script generation", "Customer lifecycle operations"],
-          pain: "Old customers are not operated, staff turnover takes customer context away, and sources are unclear."
-        }
+        zh: ["AI 私域生命周期控制器", "Private Domain CRM", "把流量变成留量，把一次到店变成持续复购。", ["客户标签管理", "复购提醒", "自动生成私域话术"]],
+        en: ["Private Domain CRM", "Lifecycle controller", "Turn traffic into owned relationships and repeat purchase cycles.", ["Customer tags", "Repurchase reminders", "Private-domain scripts"]]
       },
       {
-        zh: {
-          title: "招商增长基础设施",
-          enTitle: "Franchise Growth OS",
-          summary: "为连锁品牌打造加盟即送 AI 获客系统的系统级招商筹码。",
-          abilities: ["总部统一营销资产库", "加盟门店内容分发", "加盟商获客系统配置", "门店线索与转化数据看板", "标准化运营动作复制", "总部统一策略，门店本地化执行", "可按年收取系统维护与营销服务费用"],
-          pain: "加盟商真正关心开店以后有没有客流、总部能不能持续提供获客能力。"
-        },
-        en: {
-          title: "Franchise Growth OS",
-          enTitle: "Franchise acquisition infrastructure",
-          summary: "Turn AI acquisition into a system-level franchise weapon bundled with every new store.",
-          abilities: ["Centralized HQ marketing asset library", "Franchise store content distribution", "Franchisee acquisition-system configuration", "Store lead and conversion dashboards", "Standardized operation replication", "HQ strategy with localized store execution", "Annual system maintenance and marketing-service billing"],
-          pain: "Franchisees care less about stories and more about whether HQ can continuously bring traffic."
-        }
+        zh: ["招商增长基础设施", "Franchise Growth OS", "为连锁品牌打造加盟即送 AI 获客系统的招商筹码。", ["总部营销资产库", "加盟门店内容分发", "系统维护费模型"]],
+        en: ["Franchise Growth OS", "Franchise acquisition infra", "Bundle AI acquisition with every franchise package.", ["HQ asset library", "Store content distribution", "Maintenance-fee model"]]
       },
       {
-        zh: {
-          title: "智能客服与转化网关",
-          enTitle: "AI Conversion Gateway",
-          summary: "让官网、落地页和私域入口具备自动答疑和自动转化能力。",
-          abilities: ["官网 AI 聊天助手", "品牌知识库问答", "产品与服务介绍问答", "多语言咨询回复", "来源链接与下一步引导", "客户问题沉淀为知识库", "咨询线索转入私域或销售跟进"],
-          pain: "客户看了页面不咨询，咨询后没人及时回复，销售无法沉淀高频问题。"
-        },
-        en: {
-          title: "AI Conversion Gateway",
-          enTitle: "Website and landing-page conversion layer",
-          summary: "Equip websites, landing pages and private-domain entrances with automated Q&A and conversion routing.",
-          abilities: ["Website AI chat assistant", "Brand knowledge-base Q&A", "Product and service Q&A", "Multilingual consultation replies", "Source links and next-step guidance", "Customer questions saved as knowledge", "Consultation leads routed to CRM or sales follow-up"],
-          pain: "Visitors do not ask, responses are late, answers are inconsistent, and sales cannot reuse frequent questions."
-        }
+        zh: ["智能客服与转化网关", "AI Conversion Gateway", "让官网、落地页和私域入口具备自动答疑和自动转化能力。", ["官网 AI 聊天助手", "知识库问答", "线索转入私域"]],
+        en: ["AI Conversion Gateway", "Website conversion layer", "Add automated Q&A and conversion routing to websites and landing pages.", ["Website AI assistant", "Knowledge-base Q&A", "Lead routing"]]
       },
       {
-        zh: {
-          title: "数据看板与运营中枢",
-          enTitle: "Data Ops Console",
-          summary: "老板不需要懂技术，只需要看结果。",
-          abilities: ["内容生产看板", "线索池看板", "客户跟进看板", "社媒互动看板", "门店运营看板", "任务执行日志", "异常提醒与人工接管"],
-          pain: "老板只看到员工好像在忙，但不知道哪些动作真的带来了线索和成交。"
-        },
-        en: {
-          title: "Data Ops Console",
-          enTitle: "Operational command center",
-          summary: "Owners do not need to understand technology. They need a command center for results.",
-          abilities: ["Content production dashboard", "Lead-pool dashboard", "Customer follow-up dashboard", "Social engagement dashboard", "Store operations dashboard", "Task execution logs", "Exception alerts and human takeover"],
-          pain: "The team looks busy, but owners cannot see which actions actually create leads and revenue."
-        }
+        zh: ["数据看板与运营中枢", "Data Ops Console", "老板不需要懂技术，只需要看结果。", ["线索池看板", "任务执行日志", "异常提醒与接管"]],
+        en: ["Data Ops Console", "Operational command center", "Owners do not need to understand technology. They need results.", ["Lead-pool dashboard", "Task logs", "Exception takeover"]]
       },
       {
-        zh: {
-          title: "无人值守自动化引擎",
-          enTitle: "Autopilot Runtime Engine",
-          summary: "把重复、低效、依赖人工记忆的营销动作交给 AI 系统。",
-          abilities: ["定时采集", "定时内容生成", "定时发布准备", "自动化浏览器执行", "任务失败诊断", "异常恢复提醒", "人工审核后继续自动执行"],
-          pain: "门店没有专职技术团队，也没有稳定的新媒体执行团队，但需要每天持续引流。"
-        },
-        en: {
-          title: "Autopilot Runtime Engine",
-          enTitle: "Unattended automation runtime",
-          summary: "Move repetitive, inefficient, memory-dependent marketing work into the AI runtime.",
-          abilities: ["Scheduled collection", "Scheduled content generation", "Scheduled publishing preparation", "Automated browser execution", "Task failure diagnosis", "Exception recovery alerts", "Continue automation after human review"],
-          pain: "Stores lack technical teams and stable media teams, yet still need daily acquisition work."
-        }
+        zh: ["无人值守自动化引擎", "Autopilot Runtime", "把重复、低效、依赖人工记忆的营销动作交给 AI 系统。", ["定时采集", "自动化浏览器执行", "任务失败诊断"]],
+        en: ["Autopilot Runtime", "Unattended automation", "Move repetitive marketing work into an AI runtime.", ["Scheduled collection", "Browser automation", "Failure diagnosis"]]
       }
     ];
 
     const PERSONAS = [
       {
-        zh: {
-          label: "连锁品牌招商负责人",
-          title: "系统级赋能，把获客能力变成招商核武器。",
-          body: "加盟即送全套 AI 获客系统，将底层数据抓取与算法分发能力作为招商终极核武器，创造持续收取的系统维护费被动收入。"
-        },
-        en: {
-          label: "Franchise and chain-brand leaders",
-          title: "System-level enablement turns acquisition into the ultimate franchise weapon.",
-          body: "Bundle a full AI acquisition system with every franchise package, using low-level data capture and algorithmic distribution as the decisive asset while creating recurring maintenance-fee income."
-        }
+        zh: ["连锁品牌招商负责人", "系统级赋能，把获客能力变成招商核武器。", "加盟即送全套 AI 获客系统，将底层数据抓取与算法分发能力作为招商终极筹码，创造持续收取的系统维护费收入。"],
+        en: ["Franchise and chain-brand leaders", "System-level enablement turns acquisition into a franchise weapon.", "Bundle a full AI acquisition system with every franchise package and create recurring maintenance-fee revenue."]
       },
       {
-        zh: {
-          label: "高客单价传统实体店老板",
-          title: "极简交付，直接开箱即用总部级增长基建。",
-          body: "无需配置 3-5 人研发或新媒体团队，直接开箱即用总部级 AI 自动截流与私域管家。"
-        },
-        en: {
-          label: "High-ticket physical store owners",
-          title: "Simple delivery: deploy HQ-grade growth infrastructure out of the box.",
-          body: "No need to hire a 3-5 person R&D or media team. Use HQ-level AI interception and private-domain operations immediately."
-        }
+        zh: ["高客单价传统实体店老板", "极简交付，直接开箱即用总部级增长基建。", "无需配置 3-5 人研发或新媒体团队，直接使用总部级 AI 自动截流与私域管家。"],
+        en: ["High-ticket physical store owners", "Deploy HQ-grade growth infrastructure out of the box.", "No need for a 3-5 person R&D or media team. Use HQ-level AI interception and private-domain operations immediately."]
       }
     ];
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!reduceMotion) document.body.classList.add("motion");
-
     const state = {
       lang: localStorage.getItem("kaaaai_lang") || "zh",
-      theme: ["dark", "light"].includes(localStorage.getItem("kaaaai_theme")) ? localStorage.getItem("kaaaai_theme") : "dark",
-      terminalTimer: null
+      theme: ["dark", "light"].includes(localStorage.getItem("kaaaai_theme")) ? localStorage.getItem("kaaaai_theme") : "dark"
     };
 
     function t(key) {
       return I18N[state.lang][key] || I18N.zh[key] || key;
-    }
-
-    function randomHex() {
-      return Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, "0").toUpperCase();
-    }
-
-    function randomStream() {
-      return [
-        `0x${randomHex()} :: ${Math.floor(Math.random() * 900 + 100)},${Math.floor(Math.random() * 900 + 100)}`,
-        `SIG:${randomHex().slice(0, 4)}  NODE:${randomHex().slice(0, 4)}`,
-        `PKT_${Math.floor(Math.random() * 9999).toString().padStart(4, "0")}  OK`
-      ].join("\n");
-    }
-
-    function renderEngines() {
-      const grid = document.getElementById("engineGrid");
-      grid.innerHTML = ENGINES.map((engine, index) => {
-        const item = engine[state.lang];
-        const abilities = item.abilities.map((ability) => `<li>${ability}</li>`).join("");
-        return `
-          <article class="engine-card reveal" data-tilt data-stream="${randomStream()}">
-            <div class="engine-top">
-              <span class="engine-index">${String(index + 1).padStart(2, "0")}</span>
-              <h3 class="engine-title">${item.title}<small>${item.enTitle}</small></h3>
-            </div>
-            <p class="summary">${item.summary}</p>
-            <div class="ability">
-              <strong>${state.lang === "zh" ? "CORE_CAPABILITIES" : "CORE_CAPABILITIES"}</strong>
-              <ol>${abilities}</ol>
-            </div>
-            <p class="pain"><strong>${state.lang === "zh" ? "SOLVES" : "SOLVES"}:</strong> ${item.pain}</p>
-          </article>
-        `;
-      }).join("");
-      wireTiltAndStreams(grid);
-      observeReveals(grid.querySelectorAll(".reveal"));
-    }
-
-    function renderPersonas() {
-      const grid = document.getElementById("personaGrid");
-      grid.innerHTML = PERSONAS.map((persona) => {
-        const item = persona[state.lang];
-        return `
-          <article class="persona-card reveal">
-            <span>${item.label}</span>
-            <h3>${item.title}</h3>
-            <p>${item.body}</p>
-          </article>
-        `;
-      }).join("");
-      observeReveals(grid.querySelectorAll(".reveal"));
     }
 
     function applyI18n() {
@@ -1327,196 +1375,51 @@
         el.textContent = t(el.dataset.i18n);
       });
       document.getElementById("langToggle").textContent = state.lang === "zh" ? "EN" : "中文";
+      renderFeatures();
       renderEngines();
       renderPersonas();
-      startTypewriter();
     }
 
     function applyTheme() {
       document.body.dataset.theme = state.theme;
-      document.getElementById("themeToggle").textContent = state.theme === "dark" ? "LIGHT" : "DARK";
+      const themeToggle = document.getElementById("themeToggle");
+      themeToggle.textContent = "";
+      themeToggle.setAttribute("aria-label", state.theme === "dark" ? "切换到浅色模式" : "切换到深色模式");
       localStorage.setItem("kaaaai_theme", state.theme);
     }
 
-    function startTypewriter() {
-      const el = document.getElementById("terminalLine");
-      const text = state.lang === "zh"
-        ? "> Initializing KaaaAi Autopilot Engine..."
-        : "> Initializing KaaaAi Autopilot Engine...";
-      clearInterval(state.terminalTimer);
-      el.textContent = "";
-      let index = 0;
-      state.terminalTimer = setInterval(() => {
-        el.textContent = text.slice(0, index);
-        index += 1;
-        if (index > text.length) clearInterval(state.terminalTimer);
-      }, reduceMotion ? 1 : 38);
+    function renderFeatures() {
+      document.getElementById("featureGrid").innerHTML = FEATURES.map((feature, index) => {
+        const item = feature[state.lang];
+        return `<article class="feature-card">
+          <div class="module-index"><span>${String(index + 1).padStart(2, "0")}</span><span>${item[1]}</span></div>
+          <h3>${item[0]}</h3>
+          <p>${item[2]}</p>
+        </article>`;
+      }).join("");
     }
 
-    let revealObserver;
-    function observeReveals(items) {
-      if (!revealObserver) {
-        revealObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12 });
-      }
-      items.forEach((item) => revealObserver.observe(item));
+    function renderEngines() {
+      document.getElementById("engineGrid").innerHTML = ENGINES.map((engine, index) => {
+        const item = engine[state.lang];
+        return `<article class="engine-card">
+          <div class="module-index"><span>${String(index + 1).padStart(2, "0")}</span><span>--engine</span></div>
+          <h3>${item[0]}<small>${item[1]}</small></h3>
+          <p>${item[2]}</p>
+          <ol>${item[3].map((ability) => `<li>${ability}</li>`).join("")}</ol>
+        </article>`;
+      }).join("");
     }
 
-    function wireTiltAndStreams(root = document) {
-      root.querySelectorAll("[data-tilt]").forEach((card) => {
-        let streamTimer = null;
-        card.addEventListener("pointerenter", () => {
-          card.dataset.stream = randomStream();
-          streamTimer = setInterval(() => { card.dataset.stream = randomStream(); }, 420);
-        });
-        card.addEventListener("pointermove", (event) => {
-          if (reduceMotion) return;
-          const rect = card.getBoundingClientRect();
-          const x = (event.clientX - rect.left) / rect.width - 0.5;
-          const y = (event.clientY - rect.top) / rect.height - 0.5;
-          card.style.transform = `translateY(-8px) rotateX(${y * -5}deg) rotateY(${x * 5}deg)`;
-        });
-        card.addEventListener("pointerleave", () => {
-          clearInterval(streamTimer);
-          card.style.transform = "";
-        });
-      });
-    }
-
-    function runCounters() {
-      const counters = document.querySelectorAll("[data-counter]");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const el = entry.target;
-          const target = Number(el.dataset.target || 0);
-          const prefix = el.dataset.prefix || "";
-          const suffix = el.dataset.suffix || "";
-          const duration = reduceMotion ? 1 : 900;
-          const start = performance.now();
-          const step = (time) => {
-            const progress = Math.min((time - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = `${prefix}${Math.round(target * eased)}${suffix}`;
-            if (progress < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-          observer.unobserve(el);
-        });
-      }, { threshold: 0.65 });
-      counters.forEach((counter) => observer.observe(counter));
-    }
-
-    function runSignalCanvas() {
-      const canvas = document.getElementById("signalCanvas");
-      const ctx = canvas.getContext("2d");
-      if (!canvas || !ctx || reduceMotion) return;
-      const pointer = { x: -9999, y: -9999 };
-      let nodes = [];
-      let pulses = [];
-      let width = 0;
-      let height = 0;
-      let lastPulse = 0;
-
-      function resize() {
-        const dpr = window.devicePixelRatio || 1;
-        width = canvas.width = window.innerWidth * dpr;
-        height = canvas.height = window.innerHeight * dpr;
-        canvas.style.width = `${window.innerWidth}px`;
-        canvas.style.height = `${window.innerHeight}px`;
-        const count = window.innerWidth < 760 ? 38 : 72;
-        nodes = Array.from({ length: count }, () => ({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.48 * dpr,
-          vy: (Math.random() - 0.5) * 0.48 * dpr,
-          r: (Math.random() * 1.8 + 0.8) * dpr
-        }));
-      }
-
-      function packetPulse(x, y, strength) {
-        pulses.push({ x, y, r: 0, a: Math.min(0.9, strength), life: 1 });
-        if (pulses.length > 36) pulses.shift();
-      }
-
-      function draw(time) {
-        const dpr = window.devicePixelRatio || 1;
-        ctx.clearRect(0, 0, width, height);
-        nodes.forEach((node, index) => {
-          node.x += node.vx;
-          node.y += node.vy;
-          if (node.x < 0 || node.x > width) node.vx *= -1;
-          if (node.y < 0 || node.y > height) node.vy *= -1;
-
-          const dx = node.x - pointer.x * dpr;
-          const dy = node.y - pointer.y * dpr;
-          const pointerDistance = Math.hypot(dx, dy);
-          if (pointerDistance < 150 * dpr) {
-            node.x += dx * 0.01;
-            node.y += dy * 0.01;
-          }
-
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-          ctx.fillStyle = "rgba(91, 255, 179, 0.7)";
-          ctx.fill();
-
-          for (let next = index + 1; next < nodes.length; next += 1) {
-            const other = nodes[next];
-            const distance = Math.hypot(node.x - other.x, node.y - other.y);
-            const maxDistance = 142 * dpr;
-            if (distance < maxDistance) {
-              const alpha = (1 - distance / maxDistance) * 0.22;
-              ctx.beginPath();
-              ctx.moveTo(node.x, node.y);
-              ctx.lineTo(other.x, other.y);
-              ctx.strokeStyle = `rgba(77, 208, 255, ${alpha})`;
-              ctx.lineWidth = 1 * dpr;
-              ctx.stroke();
-
-              if (distance < 34 * dpr && time - lastPulse > 75 && Math.random() > 0.72) {
-                lastPulse = time;
-                packetPulse((node.x + other.x) / 2, (node.y + other.y) / 2, 1 - distance / (34 * dpr));
-              }
-            }
-          }
-        });
-
-        pulses = pulses.filter((pulse) => pulse.life > 0.02);
-        pulses.forEach((pulse) => {
-          pulse.r += 1.9 * dpr;
-          pulse.life *= 0.91;
-          ctx.beginPath();
-          ctx.arc(pulse.x, pulse.y, pulse.r, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(255, 200, 87, ${pulse.a * pulse.life})`;
-          ctx.lineWidth = 1.2 * dpr;
-          ctx.stroke();
-          ctx.beginPath();
-          ctx.arc(pulse.x, pulse.y, 2.2 * dpr, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(91, 255, 179, ${pulse.life})`;
-          ctx.fill();
-        });
-
-        requestAnimationFrame(draw);
-      }
-
-      resize();
-      window.addEventListener("resize", resize);
-      window.addEventListener("pointermove", (event) => {
-        pointer.x = event.clientX;
-        pointer.y = event.clientY;
-      });
-      window.addEventListener("pointerleave", () => {
-        pointer.x = -9999;
-        pointer.y = -9999;
-      });
-      requestAnimationFrame(draw);
+    function renderPersonas() {
+      document.getElementById("personaGrid").innerHTML = PERSONAS.map((persona) => {
+        const item = persona[state.lang];
+        return `<article class="persona-card">
+          <span>${item[0]}</span>
+          <h3>${item[1]}</h3>
+          <p>${item[2]}</p>
+        </article>`;
+      }).join("");
     }
 
     document.getElementById("langToggle").addEventListener("click", () => {
@@ -1526,15 +1429,22 @@
     });
 
     document.getElementById("themeToggle").addEventListener("click", () => {
+      const themeToggle = document.getElementById("themeToggle");
+      themeToggle.classList.remove("is-pulling");
+      document.body.classList.remove("theme-flash");
+      void themeToggle.offsetWidth;
+      themeToggle.classList.add("is-pulling");
+      document.body.classList.add("theme-flash");
       state.theme = state.theme === "dark" ? "light" : "dark";
       applyTheme();
+      window.setTimeout(() => {
+        themeToggle.classList.remove("is-pulling");
+        document.body.classList.remove("theme-flash");
+      }, 560);
     });
 
     applyTheme();
     applyI18n();
-    observeReveals(document.querySelectorAll(".reveal"));
-    runCounters();
-    runSignalCanvas();
   </script>
 </body>
 </html>
